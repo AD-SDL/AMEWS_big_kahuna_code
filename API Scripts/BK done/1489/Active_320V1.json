@@ -1,0 +1,133 @@
+{
+    "code": "320V1",
+    "barcode": "000069",
+    "rack": {
+        "name": "Rack 6x15 ICP robotic",
+        "type": "ICP90",
+        "instrument": "BK",
+        "position": "Deck 16-17 Waste 1",
+        "label": "",
+        "code": null,
+        "holder": null,
+        "items": 90,
+        "layout": "rectangular",
+        "rows": 6,
+        "columns": 15
+    },
+    "route": {
+        "ready": "no",
+        "type": "active",
+        "priority": "clear",
+        "route": [
+            "UR5",
+            "Storage",
+            "UR5",
+            "ICP",
+            "UR5",
+            "Trash"
+        ],
+        "step": 0,
+        "datetimes": []
+    },
+    "creator": {
+        "location": "BK",
+        "position": "Deck 16-17 Waste 1",
+        "ID": "ICP1",
+        "protocol": 1489,
+        "datetime": "2025-04-10 00:31:21.277752",
+        "content": {
+            "ICP1:A1": {
+                "composition": {
+                    "standard": 0.041666666666666664,
+                    "solvent": 0.9583333333333334
+                },
+                "constitution": {
+                    "Y": 0.8333333333333333
+                },
+                "unit": "ppm",
+                "volume": 2400,
+                "timestamp": "20250410_003119",
+                "parents": [
+                    "plate1:A1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    100,
+                    2300
+                ],
+                "type": "blank",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:A2": {
+                "composition": {
+                    "standard": 0.041666666666666664,
+                    "solvent": 0.9583333333333334
+                },
+                "constitution": {
+                    "Y": 0.8333333333333333
+                },
+                "unit": "ppm",
+                "volume": 2400,
+                "timestamp": "20250410_003119",
+                "parents": [
+                    "plate1:A2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    100,
+                    2300
+                ],
+                "type": "blank",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:A3": {
+                "composition": {
+                    "standard": 0.041666666666666664,
+                    "solvent": 0.9583333333333334
+                },
+                "constitution": {
+                    "Y": 0.8333333333333333
+                },
+                "unit": "ppm",
+                "volume": 2400,
+                "timestamp": "20250410_003119",
+                "parents": [
+                    "plate1:B1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    100,
+                    2300
+                ],
+                "type": "blank",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:A4": {
+                "composition": {
+                    "standard": 0.041666666666666664,
+                    "solvent": 0.9583333333333334
+                },
+                "constitution": {
+                    "Y": 0.8333333333333333
+                },
+                "unit": "ppm",
+                "volume": 2400,
+                "timestamp": "20250410_003119",
+                "parents": [
+                    "plate1:B2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    100,
+                    2300
+                ],
+                "type": "blank",
+                "container": "ICP tube",
+                "name": ""
+            }
+        }
+    }
+}

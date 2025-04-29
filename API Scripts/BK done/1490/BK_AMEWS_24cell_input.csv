@@ -1,0 +1,7 @@
+plate,source well,name,volume,Na*,K*,Mg*,Ca*,Mn*,Y*
+source1,A1,mixture1,20000,200,,,,,300
+source1,A2,mixture2,20000,,200,,,,300
+source1,A3,mixture3,20000,,,200,,,300
+source1,A4,mixture4,20000,,,,200,,300
+source1,B1,mixture5,20000,,,,,200,300
+source1,B2,mixture6,20000,,,,,,300

@@ -1,0 +1,7 @@
+plate,well,mixture1,mixture2,mixture3,mixture4,mixture5,mixture6
+plate1,A3,1000,,,,,
+plate1,B3,500,500,,,,
+plate1,C3,,,1000,,,
+plate1,A4,,,,1000,,
+plate1,B4,,,,,1000,
+plate1,C4,,,,,,100

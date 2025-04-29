@@ -1,0 +1,277 @@
+{
+    "solvent": {
+        "composition": {
+            "solvent": 1.0
+        },
+        "constitution": {},
+        "unit": "ppm",
+        "volume": 0,
+        "timestamp": "",
+        "parents": [],
+        "parent_volumes": [],
+        "type": "solvent",
+        "container": "",
+        "name": "solvent"
+    },
+    "standard": {
+        "composition": {
+            "standard": 1.0
+        },
+        "constitution": {
+            "Y": 10
+        },
+        "unit": "ppm",
+        "volume": 0,
+        "timestamp": "",
+        "parents": [],
+        "parent_volumes": [],
+        "type": "source",
+        "container": "",
+        "name": "standard"
+    },
+    "source1:A1": {
+        "composition": {
+            "mixture1": 1.0
+        },
+        "constitution": {
+            "Na": 200.0,
+            "Y": 300
+        },
+        "unit": "ppm",
+        "volume": 0,
+        "timestamp": "",
+        "parents": [],
+        "parent_volumes": [],
+        "type": "source",
+        "container": "",
+        "name": "mixture1"
+    },
+    "source1:A2": {
+        "composition": {
+            "mixture2": 1.0
+        },
+        "constitution": {
+            "K": 200.0,
+            "Y": 300
+        },
+        "unit": "ppm",
+        "volume": 0,
+        "timestamp": "",
+        "parents": [],
+        "parent_volumes": [],
+        "type": "source",
+        "container": "",
+        "name": "mixture2"
+    },
+    "source1:A3": {
+        "composition": {
+            "mixture3": 1.0
+        },
+        "constitution": {
+            "Mg": 200.0,
+            "Y": 300
+        },
+        "unit": "ppm",
+        "volume": 0,
+        "timestamp": "",
+        "parents": [],
+        "parent_volumes": [],
+        "type": "source",
+        "container": "",
+        "name": "mixture3"
+    },
+    "source1:A4": {
+        "composition": {
+            "mixture4": 1.0
+        },
+        "constitution": {
+            "Ca": 200.0,
+            "Y": 300
+        },
+        "unit": "ppm",
+        "volume": 0,
+        "timestamp": "",
+        "parents": [],
+        "parent_volumes": [],
+        "type": "source",
+        "container": "",
+        "name": "mixture4"
+    },
+    "source1:B1": {
+        "composition": {
+            "mixture5": 1.0
+        },
+        "constitution": {
+            "Mn": 200.0,
+            "Y": 300
+        },
+        "unit": "ppm",
+        "volume": 0,
+        "timestamp": "",
+        "parents": [],
+        "parent_volumes": [],
+        "type": "source",
+        "container": "",
+        "name": "mixture5"
+    },
+    "source1:B2": {
+        "composition": {
+            "mixture6": 1.0
+        },
+        "constitution": {
+            "Y": 300
+        },
+        "unit": "ppm",
+        "volume": 0,
+        "timestamp": "",
+        "parents": [],
+        "parent_volumes": [],
+        "type": "source",
+        "container": "",
+        "name": "mixture6"
+    },
+    "plate1:A1": {
+        "composition": {
+            "standard": 1.0
+        },
+        "constitution": {
+            "Y": 10.0
+        },
+        "unit": "ppm",
+        "volume": 100000.0,
+        "timestamp": "20250418_131846",
+        "parents": [
+            "standard"
+        ],
+        "parent_volumes": [
+            100000.0
+        ],
+        "type": "sample",
+        "container": "glass vial",
+        "name": ""
+    },
+    "plate1:A3": {
+        "composition": {
+            "standard": 0.9937872824930076,
+            "mixture1": 0.0049689364124650155,
+            "solvent": 0.0012437810945273853
+        },
+        "constitution": {
+            "Y": 11.42855374866958,
+            "Na": 0.9937872824930031
+        },
+        "unit": "ppm",
+        "volume": 100500.0,
+        "timestamp": "20250418_131846",
+        "parents": [
+            "standard",
+            "source1:A1",
+            "solvent"
+        ],
+        "parent_volumes": [
+            99875.62189054726,
+            499.3781094527363,
+            125.0
+        ],
+        "type": "sample",
+        "container": "glass vial",
+        "name": ""
+    },
+    "plate1:B1": {
+        "composition": {
+            "standard": 1.0
+        },
+        "constitution": {
+            "Y": 10.0
+        },
+        "unit": "ppm",
+        "volume": 100000.0,
+        "timestamp": "20250418_131846",
+        "parents": [
+            "standard"
+        ],
+        "parent_volumes": [
+            100000.0
+        ],
+        "type": "sample",
+        "container": "glass vial",
+        "name": ""
+    },
+    "plate1:B3": {
+        "composition": {
+            "standard": 0.9937872824930076,
+            "mixture1": 0.0049689364124650155,
+            "solvent": 0.0012437810945273853
+        },
+        "constitution": {
+            "Y": 11.42855374866958,
+            "Na": 0.9937872824930031
+        },
+        "unit": "ppm",
+        "volume": 100500.0,
+        "timestamp": "20250418_131846",
+        "parents": [
+            "standard",
+            "source1:A1",
+            "solvent"
+        ],
+        "parent_volumes": [
+            99875.62189054726,
+            499.3781094527363,
+            125.0
+        ],
+        "type": "sample",
+        "container": "glass vial",
+        "name": ""
+    },
+    "ICP1:A3": {
+        "composition": {
+            "standard": 0.05349596105494035,
+            "mixture1": 0.00026747980527470054,
+            "solvent": 0.946236559139785
+        },
+        "constitution": {
+            "Y": 0.6152035521318138,
+            "Na": 0.05349596105494011
+        },
+        "unit": "ppm",
+        "volume": 2325.0,
+        "timestamp": "20250418_131846",
+        "parents": [
+            "plate1:A3",
+            "solvent"
+        ],
+        "parent_volumes": [
+            125.0,
+            2200
+        ],
+        "type": "sample",
+        "container": "ICP tube",
+        "name": ""
+    },
+    "ICP1:A4": {
+        "composition": {
+            "standard": 0.05349596105494035,
+            "mixture1": 0.00026747980527470054,
+            "solvent": 0.946236559139785
+        },
+        "constitution": {
+            "Y": 0.6152035521318138,
+            "Na": 0.05349596105494011
+        },
+        "unit": "ppm",
+        "volume": 2325.0,
+        "timestamp": "20250418_131846",
+        "parents": [
+            "plate1:B3",
+            "solvent"
+        ],
+        "parent_volumes": [
+            125.0,
+            2200
+        ],
+        "type": "sample",
+        "container": "ICP tube",
+        "name": ""
+    }
+}

@@ -1,0 +1,189 @@
+<TipRackConfigurations>
+  <TipRackConfiguration type="PDT">
+    <TipRackConfiguration>
+      <TipItem>
+        <SyringeResource>PDT 10uL</SyringeResource>
+        <ArmResource>Arm - 10uL PDT</ArmResource>
+        <GravimetricResource />
+        <MultiTipResource />
+        <TipSize>10</TipSize>
+        <ToolSizeTag>10uLTip</ToolSizeTag>
+        <VialSubstrate>PDT Tool - 10/100uL</VialSubstrate>
+        <VialPosition>Deck Position</VialPosition>
+        <WellRow>1</WellRow>
+        <WellColumn>1</WellColumn>
+        <MinDispenseVolume>0</MinDispenseVolume>
+        <MaxDispenseVolume>10</MaxDispenseVolume>
+        <ExcessVolume>0</ExcessVolume>
+      </TipItem>
+      <TipItem>
+        <SyringeResource>PDT 25uL</SyringeResource>
+        <ArmResource>Arm - 25uL PDT</ArmResource>
+        <GravimetricResource />
+        <MultiTipResource />
+        <TipSize>25</TipSize>
+        <ToolSizeTag>25uLTip</ToolSizeTag>
+        <VialSubstrate>PDT Tool - 25/50/250uL</VialSubstrate>
+        <VialPosition>Deck Position</VialPosition>
+        <WellRow>1</WellRow>
+        <WellColumn>1</WellColumn>
+        <MinDispenseVolume>0</MinDispenseVolume>
+        <MaxDispenseVolume>25</MaxDispenseVolume>
+        <ExcessVolume>0</ExcessVolume>
+      </TipItem>
+      <TipItem>
+        <SyringeResource>PDT 50uL</SyringeResource>
+        <ArmResource>Arm - 50uL PDT</ArmResource>
+        <GravimetricResource />
+        <MultiTipResource />
+        <TipSize>50</TipSize>
+        <ToolSizeTag>50uLTip</ToolSizeTag>
+        <VialSubstrate>PDT Tool - 25/50/250uL</VialSubstrate>
+        <VialPosition>Deck Position</VialPosition>
+        <WellRow>1</WellRow>
+        <WellColumn>1</WellColumn>
+        <MinDispenseVolume>0</MinDispenseVolume>
+        <MaxDispenseVolume>50</MaxDispenseVolume>
+        <ExcessVolume>0</ExcessVolume>
+      </TipItem>
+      <TipItem>
+        <SyringeResource>PDT 100uL</SyringeResource>
+        <ArmResource>Arm - 100uL PDT</ArmResource>
+        <GravimetricResource />
+        <MultiTipResource />
+        <TipSize>100</TipSize>
+        <ToolSizeTag>100uLTip</ToolSizeTag>
+        <VialSubstrate>PDT Tool - 10/100uL</VialSubstrate>
+        <VialPosition>Deck Position</VialPosition>
+        <WellRow>1</WellRow>
+        <WellColumn>1</WellColumn>
+        <MinDispenseVolume>0</MinDispenseVolume>
+        <MaxDispenseVolume>100</MaxDispenseVolume>
+        <ExcessVolume>0</ExcessVolume>
+      </TipItem>
+      <TipItem>
+        <SyringeResource>PDT 250uL</SyringeResource>
+        <ArmResource>Arm - 250uL PDT</ArmResource>
+        <GravimetricResource />
+        <MultiTipResource />
+        <TipSize>250</TipSize>
+        <ToolSizeTag>250uLTip</ToolSizeTag>
+        <VialSubstrate>PDT Tool - 25/50/250uL</VialSubstrate>
+        <VialPosition>Deck Position</VialPosition>
+        <WellRow>1</WellRow>
+        <WellColumn>1</WellColumn>
+        <MinDispenseVolume>0</MinDispenseVolume>
+        <MaxDispenseVolume>250</MaxDispenseVolume>
+        <ExcessVolume>0</ExcessVolume>
+      </TipItem>
+      <TipItem>
+        <SyringeResource>PDT 1000uL</SyringeResource>
+        <ArmResource>Arm - 1000uL PDT</ArmResource>
+        <GravimetricResource />
+        <MultiTipResource />
+        <TipSize>1000</TipSize>
+        <ToolSizeTag>1000uLTip</ToolSizeTag>
+        <VialSubstrate>PDT Tool - 1000uL</VialSubstrate>
+        <VialPosition>Deck Position</VialPosition>
+        <WellRow>1</WellRow>
+        <WellColumn>1</WellColumn>
+        <MinDispenseVolume>0</MinDispenseVolume>
+        <MaxDispenseVolume>1000</MaxDispenseVolume>
+        <ExcessVolume>0</ExcessVolume>
+      </TipItem>
+      <TipItem>
+        <SyringeResource>PDT 1mL</SyringeResource>
+        <ArmResource>Arm - 1mL PDT</ArmResource>
+        <GravimetricResource />
+        <MultiTipResource />
+        <TipSize>1000</TipSize>
+        <ToolSizeTag>1mLTip</ToolSizeTag>
+        <VialSubstrate>Eppendorf PDT Tool</VialSubstrate>
+        <VialPosition>Deck Position</VialPosition>
+        <WellRow>1</WellRow>
+        <WellColumn>1</WellColumn>
+        <MinDispenseVolume>0</MinDispenseVolume>
+        <MaxDispenseVolume>1000</MaxDispenseVolume>
+        <ExcessVolume>0</ExcessVolume>
+      </TipItem>
+      <TipItem>
+        <SyringeResource>PDT 5mL</SyringeResource>
+        <ArmResource>Arm - 5mL PDT</ArmResource>
+        <GravimetricResource />
+        <MultiTipResource />
+        <TipSize>5000</TipSize>
+        <ToolSizeTag>5mLTip</ToolSizeTag>
+        <VialSubstrate>Eppendorf PDT Tool</VialSubstrate>
+        <VialPosition>Deck Position</VialPosition>
+        <WellRow>1</WellRow>
+        <WellColumn>1</WellColumn>
+        <MinDispenseVolume>0</MinDispenseVolume>
+        <MaxDispenseVolume>5000</MaxDispenseVolume>
+        <ExcessVolume>0</ExcessVolume>
+      </TipItem>
+      <TipItem>
+        <SyringeResource>PDT 10mL</SyringeResource>
+        <ArmResource>Arm - 10mL PDT</ArmResource>
+        <GravimetricResource />
+        <MultiTipResource />
+        <TipSize>10000</TipSize>
+        <ToolSizeTag>10mLTip</ToolSizeTag>
+        <VialSubstrate>Eppendorf PDT Tool</VialSubstrate>
+        <VialPosition>Deck Position</VialPosition>
+        <WellRow>1</WellRow>
+        <WellColumn>1</WellColumn>
+        <MinDispenseVolume>0</MinDispenseVolume>
+        <MaxDispenseVolume>10000</MaxDispenseVolume>
+        <ExcessVolume>0</ExcessVolume>
+      </TipItem>
+      <TipRackItem>
+        <Name>Deck 2-3 Tip Rack 1</Name>
+        <RackReplaceable>False</RackReplaceable>
+        <PlateItem>
+          <SubstratePosition>Deck 2-3 Tip Rack 1</SubstratePosition>
+          <Name>Tip Rack 6x10 1000uL PDT</Name>
+          <TipSize>1000</TipSize>
+          <ToolSizeTag>1000uLTip</ToolSizeTag>
+          <PlateColumns>10</PlateColumns>
+          <PlateRows>6</PlateRows>
+          <IsCurrent>True</IsCurrent>
+          <RemainingTips>60</RemainingTips>
+          <LastRow>0</LastRow>
+          <LastColumn>0</LastColumn>
+        </PlateItem>
+      </TipRackItem>
+      <TipRackItem>
+        <Name>Deck 2-3 Tip Rack 2</Name>
+        <RackReplaceable>False</RackReplaceable>
+        <PlateItem>
+          <SubstratePosition>Deck 2-3 Tip Rack 2</SubstratePosition>
+          <Name>Tip Rack 6x10 1000uL PDT</Name>
+          <TipSize>1000</TipSize>
+          <ToolSizeTag>1000uLTip</ToolSizeTag>
+          <PlateColumns>10</PlateColumns>
+          <PlateRows>6</PlateRows>
+          <IsCurrent>True</IsCurrent>
+          <RemainingTips>60</RemainingTips>
+          <LastRow>0</LastRow>
+          <LastColumn>0</LastColumn>
+        </PlateItem>
+      </TipRackItem>
+      <TipRackItem>
+        <Name>Deck 2-3 Tip Rack 3</Name>
+        <RackReplaceable>False</RackReplaceable>
+        <PlateItem>
+          <SubstratePosition>Deck 2-3 Tip Rack 3</SubstratePosition>
+          <Name>Tip Rack 6x10 1000uL PDT</Name>
+          <TipSize>1000</TipSize>
+          <ToolSizeTag>1000uLTip</ToolSizeTag>
+          <PlateColumns>10</PlateColumns>
+          <PlateRows>6</PlateRows>
+          <IsCurrent>False</IsCurrent>
+          <RemainingTips>0</RemainingTips>
+          <LastRow>6</LastRow>
+          <LastColumn>10</LastColumn>
+        </PlateItem>
+      </TipRackItem>
+    </TipRackConfiguration>
+  </TipRackConfiguration>
+</TipRackConfigurations>

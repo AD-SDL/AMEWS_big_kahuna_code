@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{e58ec611-f47a-41e8-be39-504fae1c8a5e}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>BK_AMEWS_6cells.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>Global|PythonCore|3.10-32</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="a10_sila.py" />
+    <Compile Include="BK_AMEWS_24cells.py" />
+    <Compile Include="BK_AMEWS_6cells.py" />
+    <Compile Include="big_kahuna_module.py" />
+    <Compile Include="ContainerManager.py" />
+    <Compile Include="CustomAlert.py" />
+    <Compile Include="CustomScheduler.py" />
+    <Compile Include="CustomSequence.py" />
+    <Compile Include="CustomService.py" />
+    <Compile Include="CustomTracker.py" />
+    <Compile Include="LogReader.py" />
+    <Compile Include="LS_AS_demo.py" />
+    <Compile Include="CustomDAQ.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|py311" />
+    <InterpreterReference Include="Global|PythonCore|3.10-32" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
