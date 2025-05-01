@@ -4,10 +4,25 @@ from madsci.common.types.base_types import BaseModel
 from typing import Literal
 from pydantic import Field
 from pydantic.types import Discriminator, Tag
-from typing import Annotated, Union
+from typing import Annotated, Union, Optional
 
 
 
+class BigKahunaParameter(BaseModel):
+    name: str = Field(
+        title="Parameter Name",
+        description = "Name of the parameter"
+    )
+    type: str = Field(
+        title="Parameter Type",
+        description = "Type of the parameter"
+
+    )
+    unit: str = Field(
+        title = "Parameter Unit",
+        description= "Unit of the parameter"
+    )
+    
 class BigKahunaPlate(BaseModel):
     name: str = Field(
         title="Plate Name",
@@ -45,9 +60,10 @@ class BigKahunaChemical(BaseModel):
         description = "Color of the chemical to display in library studio",
         default = 0x000000
     )
-    source_plate: str = Field(
+    source_plate: Optional[str] = Field(
         title="Source Plate",
         description = "Name of the plate the chemical is stored in",
+        default=None
     )
     deck_position: str = Field(
             title="Deck Position",
@@ -70,7 +86,7 @@ class BigKahunaAction(BaseModel):
     """a general big kahuna action"""
     action_type: str = Field(
         title="Action Type",
-        description="The type of the action"
+        description="The type of the action",
         default="action"
         )
 
@@ -193,14 +209,23 @@ BigKahunaActions = Annotated[
 
 
 class BigKahunaProtocol(BaseModel):
+    name: str = Field(
+        title="Protocol Name",
+        description="The Name of the Protocol"  
+        )
     units: str = Field(
         title="Protocol Units",
         description="The units for the protocol",
         default="ul"
     )
+    parameters: list[BigKahunaParameter] =  Field(
+        title="Parameters",
+        description="The list of parameters for the protocol",
+        default_factory=list
+    )
     plates: dict[str, BigKahunaPlate] =  Field(
         title="Plates",
-        description="The list of plates/libraries for the protocol",
+        description="The dictionary of plates/libraries for the protocol",
         default_factory=dict
     )
     chemicals: list[BigKahunaChemical] = Field(
