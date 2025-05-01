@@ -443,6 +443,16 @@ class CustomLS10:  # LS API wrapper calls
             )
 
         self.lib_count += 1
+       
+    def add_library(self, name: str, rows: int, columns: int, color: int):  # add substrate
+            status = self.ls.AddLibrary(
+            name,
+            nRows=rows,
+            nCols=columns,
+            color=color,
+            )
+            self.HandleStatus(status)
+            self.lib_count += 1
 
     def plate2json(self, plate):  # adds json record for external plate tracking
         kind, position, rows, cols = self.pt.get(plate)
@@ -579,6 +589,85 @@ class CustomLS10:  # LS API wrapper calls
 
         self.lib_count += 1
         return 0
+    
+    def add_chem(
+        self,
+        source,
+        chem="solvent",
+        row=0,
+        col=0,
+        volume=-1,  # if -1 indefinite volume
+        mode="factory setting|ADT",  # dispense mode # adds a new chemical with a source,
+    ):
+        if source in self.pt.plates:
+            kind, position, rows, cols = self.pt.get(source)
+            if row > rows or col > cols:
+                print(
+                    "\nERROR: %dx%d source %s for chemical %s cannot be in (%d,%d) cell"
+                    % (rows, cols, source, chem, row, col)
+                )
+                return 1
+        else:
+            kind, position = None, None
+            print(
+                "\nCAUTION: source %s for chemical %s is not in the plate list, assume off deck source"
+                % (source, chem)
+            )
+
+        if chem == "solvent":
+            color = self.rgb_to_uint(1, 1, 0)  # yellow
+        else:
+            color = self.index2color(self.lib_count)
+
+        if chem:  # chemical
+            if self.verbose:
+                print(
+                    "adds <%s> to the library, sourced from <%s> (%d,%d)\nat <%s>, color=%d (%s)\n"
+                    % (chem, kind, row, col, position, color, self.closest_color(color))
+                )
+            self.ls.AddChemical(chem, color, self.units)
+
+            if row == 0 or col == 0:
+                well = "off deck"
+            else:
+                well = self.utils.tuple2well(row, col)
+
+            self.promptsfile.AddInitialSourceState(position, "None")  # not covered
+            # self.tracker.report(ID)
+
+  
+        self.AddSource(source, chem, kind, position, color, row, col, volume)
+        self.chemfile.AddChemical(chem, mode)
+
+        self.lib_count += 1
+        return 0
+    def add_chemical(
+        self,
+        source_plate,
+        chemical_name,
+        row=0,
+        col=0,
+        color=0x000000,
+        volume=-1,  # if -1 indefinite volume
+        mode="factory setting|ADT",  # dispense mode # adds a new chemical with a source,
+    ):
+            self.ls.AddChemical(chemical_name, color, self.units)
+
+            if row == 0 or col == 0:
+                well = "off deck"
+            else:
+                well = self.utils.tuple2well(row, col)
+
+            self.promptsfile.AddInitialSourceState(source_plate.deck_position, "None")  # not covered
+            # self.tracker.report(ID)
+
+  
+            self.AddSource(source_plate.name, chemical_name, source_plate.type, source_plate.deck_position, color, row, col, volume)
+            self.chemfile.AddChemical(chemical_name, mode)
+
+            self.lib_count += 1
+            return 0
+
 
     def rename_chem(self, old, new):  # renames a chemical
         status = self.ls.RenameChemical(old, new)
