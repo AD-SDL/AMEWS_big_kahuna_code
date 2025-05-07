@@ -4,20 +4,27 @@ from typing import Annotated, Any, Optional
 
 from madsci.common.types.action_types import (
     ActionResult,
+    ActionSucceeded,
+    ActionFailed
 )
 from madsci.common.types.admin_command_types import AdminCommandResponse
 from madsci.common.types.node_types import RestNodeConfig
 from madsci.node_module.helpers import action
 from madsci.node_module.rest_node_module import RestNode
-from BK_AMEWS_6cells import AMEWS
+from madsci.common.types.resource_types import ContinuousConsumable
+from madsci.common.types.resource_types.definitions import ContinuousConsumableResourceDefinition
 from big_kahuna_protocol_types import BigKahunaProtocol, BigKahunaAction
-from CustomServiceGood import CustomLS10
+from CustomServiceGood import LS10
 import os
 
 
 
 class BigKahunaConfig(RestNodeConfig):
     """Configuration for a Big Kahuna Node"""
+    directory: str
+    resource_server_url: Optional[str]
+    deck_locations: Optional[list[str]]
+    chemical_sources: Optional[list[ContinuousConsumableResourceDefinition]]
 
     
 
@@ -26,16 +33,22 @@ class BigKahunaNode(RestNode):
     """Node Module Implementation for the Big Kahuna Instruments"""
 
     config_model = BigKahunaConfig
-
+    def startup_handler(self):
+        self.chemical_sources = {}
+        self.deck_locations = {}
+        self.resource_client = None
 
     @action
     def run_protocol(
         self,
-        protocol: BigKahunaProtocol 
+        protocol: BigKahunaProtocol,
     ) -> ActionResult:
         """generate a library studio protocol"""
-        library_studio = CustomLS10()
+        library_studio = LS10(self.config.directory)
+        library_studio.create_lib(protocol.name)
         library_studio.units = protocol.units
+        for parameter in protocol.parameters:
+            library_studio.add_param(parameter.name, parameter.type, parameter.unit)
         for name, library in protocol.plates.items():
             library_studio.add_library(library.name, library.rows, library.columns, library.color)
         for chemical in protocol.chemicals:
@@ -43,11 +56,23 @@ class BigKahunaNode(RestNode):
             library_studio.add_chemical(plate, chemical.name, chemical.row, chemical.column, chemical.color, chemical.volume)
         for action in protocol.actions:
             self.add_step(action, library_studio)
-        library_studio.finish()
+        library_studio.finish(protocol.plates)
         library_studio.as_prep()
-        library_studio.as_execute()
+        success = library_studio.as_execute()
+        if success and self.resource_client:
+            for action in protocol.actions:
+                try:
+                    self.process_resource(action, protocol)
+                except Exception as e:
+                    self.logger.error(str(e))
+            return ActionSucceeded()
+        else: 
+            return ActionFailed()
+        
+
+
    
-    def add_step(action: BigKahunaAction, library_studio: CustomLS10):
+    def add_step(action: BigKahunaAction, library_studio: LS10):
         if action.action_type == "transfer":
             library_studio.single_well_transfer(action.source_plate, action.target_plate, action.source_well, action.target_well, action.volume, action.tag_code)
         elif action.action_type == "dispense":
@@ -58,8 +83,22 @@ class BigKahunaNode(RestNode):
             library_studio.Delay(action.target_plate, action.delay)
         elif action.action_type == "stir":
             library_studio.Stir(action.target_plate, action.rate)
-
-
+   
+    def process_resource(self, action, protocol):
+        if action.action_type == "transfer":
+            target_plate_location = self.deck_locations[protocol.plates[action.target_plate].deck_location]
+            source_plate_location = self.deck_locations[protocol.plates[action.source_plate].deck_location]
+            target_well_resource = self.resource_client.get_child(self.resource_client.get_child(target_plate_location, 0).resource_id, action.target_well).resource_id
+            source_well_resource = self.resource_client.get_child(self.resource_client.get_child(source_plate_location, 0).resource_id, action.source_well).resource_id
+            self.resource_client.set_child(target_well_resource, action.target_plate, ContinuousConsumable(resource_name=action.source_plate, quantity=action.volume))
+            self.resource_client.change_quantity_by(source_well_resource, -action.volume)
+        elif action.action_type == "dispense":
+            if action.tag_code != "skip":
+                target_plate_location = self.deck_locations[protocol.plates[action.target_plate].deck_location]
+                source_chemical = self.chemical_sources[action.source_chemical]
+                target_well_resource = self.resource_client.get_child(self.resource_client.get_child(target_plate_location, 0).resource_id, action.target_well).resource_id
+                self.resource_client.set_child(target_well_resource, action.target_plate, ContinuousConsumable(resource_name=action.source_chemical, quantity=action.volume))
+                self.resource_client.change_quantity_by(source_chemical, -action.volume)
 
 if __name__ == "__main__":
     big_kahuna_node = BigKahunaNode()
