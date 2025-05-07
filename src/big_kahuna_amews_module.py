@@ -4,6 +4,7 @@ from typing import Annotated, Any, Optional
 
 from madsci.common.types.action_types import (
     ActionResult,
+    ActionSucceeded
 )
 from madsci.common.types.admin_command_types import AdminCommandResponse
 from madsci.common.types.node_types import RestNodeConfig
@@ -36,9 +37,9 @@ class BigKahunaNode(RestNode):
         log_file = os.path.join(amews.ld.dir, amews.ld.as10.log)
         excerpt_file_name = "%s.csv" % amews.ld.as10.asl.excerpt_name
         excerpt_file = os.path.join(amews.ld.dir, excerpt_file_name)
-        digest_vols_name = "%s.csv" % amews.ld.as10.asl.digest_vol_name
+        digest_vols_name = amews.ld.as10.asl.digest_vol_name
         digest_vols =  os.path.join(amews.ld.dir, digest_vols_name)
-        return ActionResult(data={"info": new_info}, files={
+        return ActionSucceeded(data={"info": new_info}, files={
                                         "raw_log": log_file, 
                                         "excerpt_log": excerpt_file, 
                                         "digest_vols": digest_vols})
@@ -53,9 +54,9 @@ class BigKahunaNode(RestNode):
         log_file = os.path.join(amews.ld.dir, amews.ld.as10.log)
         excerpt_file_name = "%s.csv" % amews.ld.as10.asl.excerpt_name
         excerpt_file = os.path.join(amews.ld.dir, excerpt_file_name)
-        digest_vols_name = "%s.csv" % amews.ld.as10.asl.digest_vol_name
+        digest_vols_name = amews.ld.as10.asl.digest_vol_name
         digest_vols =  os.path.join(amews.ld.dir, digest_vols_name)
-        return ActionResult(data={"info": new_info}, files={
+        return ActionSucceeded(data={"info": new_info}, files={
                                         "raw_log": log_file, 
                                         "excerpt_log": excerpt_file, 
                                         "digest_vols": digest_vols})
@@ -71,9 +72,9 @@ class BigKahunaNode(RestNode):
         log_file = os.path.join(amews.ld.dir, amews.ld.as10.log)
         excerpt_file_name = "%s.csv" % amews.ld.as10.asl.excerpt_name
         excerpt_file = os.path.join(amews.ld.dir, excerpt_file_name)
-        digest_vols_name = "%s.csv" % amews.ld.as10.asl.digest_vol_name
+        digest_vols_name = amews.ld.as10.asl.digest_vol_name
         digest_vols =  os.path.join(amews.ld.dir, digest_vols_name)
-        return ActionResult(data={"info": new_info}, files={
+        return ActionSucceeded(data={"info": new_info}, files={
                                         "raw_log": log_file, 
                                         "excerpt_log": excerpt_file, 
                                         "digest_vols": digest_vols})
@@ -89,9 +90,9 @@ class BigKahunaNode(RestNode):
         log_file = os.path.join(amews.ld.dir, amews.ld.as10.log)
         excerpt_file_name = "%s.csv" % amews.ld.as10.asl.excerpt_name
         excerpt_file = os.path.join(amews.ld.dir, excerpt_file_name)
-        digest_vols_name = "%s.csv" % amews.ld.as10.asl.digest_vol_name
+        digest_vols_name = amews.ld.as10.asl.digest_vol_name
         digest_vols =  os.path.join(amews.ld.dir, digest_vols_name)
-        return ActionResult(data={"info": new_info}, files={
+        return ActionSucceeded(data={"info": new_info}, files={
                                         "raw_log": log_file, 
                                         "excerpt_log": excerpt_file, 
                                         "digest_vols": digest_vols})
