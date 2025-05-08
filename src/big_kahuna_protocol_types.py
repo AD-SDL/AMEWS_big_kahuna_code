@@ -71,15 +71,18 @@ class BigKahunaChemical(BaseModel):
         )
     row: int = Field(
          title="Chemical Row",
-        description="The row of the chemical in the deck position"
+        description="The row of the chemical in the deck position",
+        default=0
         )
     column: int = Field(
         title="Chemical Column",
-        description="The column of the chemical in the deck position"
+        description="The column of the chemical in the deck position",
+        default=0
         )
     volume: float = Field(
         title="Chemical Volume",
-        description="The volume of the chemical"
+        description="The volume of the chemical",
+        default=-1
         )
 
 class BigKahunaAction(BaseModel):
