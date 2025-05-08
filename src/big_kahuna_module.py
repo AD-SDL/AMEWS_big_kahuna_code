@@ -11,9 +11,16 @@ from madsci.common.types.admin_command_types import AdminCommandResponse
 from madsci.common.types.node_types import RestNodeConfig
 from madsci.node_module.helpers import action
 from madsci.node_module.rest_node_module import RestNode
+from madsci.common.types.auth_types import OwnershipInfo
+from madsci.common.types.resource_types.definitions import (
+    ContainerResourceDefinition,
+    SlotResourceDefinition,
+)
+
 from madsci.common.types.resource_types import ContinuousConsumable
 from madsci.common.types.resource_types.definitions import ContinuousConsumableResourceDefinition
 from big_kahuna_protocol_types import BigKahunaProtocol, BigKahunaAction
+from madsci.client.resource_client import ResourceClient
 from CustomServiceGood import LS10
 import os
 
@@ -34,10 +41,20 @@ class BigKahunaNode(RestNode):
 
     config_model = BigKahunaConfig
     def startup_handler(self):
-        self.chemical_sources = {}
-        self.deck_locations = {}
-        self.resource_client = None
+        if self.config.resource_server_url:
+            self.resource_client = ResourceClient(self.config.resource_server_url)
+            self.resource_owner = OwnershipInfo(node_id=self.node_definition.node_id)
+            for location in self.config.deck_locations:
+                rec_def = SlotResourceDefinition(
+                    resource_name= self.config.node_name + "_" + location,
+                    owner=self.resource_owner,
+                )
 
+                self.resource_client.init_resource(rec_def)
+            for source in self.config.chemical_sources:
+                source.owner = self.resource_owner
+                self.resource_client.init_resource(source)
+            
     @action
     def run_protocol(
         self,
@@ -93,7 +110,7 @@ class BigKahunaNode(RestNode):
             self.resource_client.set_child(target_well_resource, action.target_plate, ContinuousConsumable(resource_name=action.source_plate, quantity=action.volume))
             self.resource_client.change_quantity_by(source_well_resource, -action.volume)
         elif action.action_type == "dispense":
-            if action.tag_code != "skip":
+            if "SkipDispense" not in action.tags:
                 target_plate_location = self.deck_locations[protocol.plates[action.target_plate].deck_location]
                 source_chemical = self.chemical_sources[action.source_chemical]
                 target_well_resource = self.resource_client.get_child(self.resource_client.get_child(target_plate_location, 0).resource_id, action.target_well).resource_id
