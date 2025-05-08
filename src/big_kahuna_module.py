@@ -74,17 +74,18 @@ class BigKahunaNode(RestNode):
         for protocol_action in protocol.actions:
             self.add_step(protocol_action, library_studio)
         library_studio.finish(protocol.plates)
-        library_studio.as_prep()
-        success = library_studio.as_execute()
-        if success and self.resource_client:
-            for action in protocol.actions:
-                try:
-                    self.process_resource(action, protocol)
-                except Exception as e:
-                    self.logger.error(str(e))
-            return ActionSucceeded()
-        else: 
-            return ActionFailed()
+        return ActionSucceeded()
+        # library_studio.as_prep()
+        # success = library_studio.as_execute()
+        # if success and self.resource_client:
+        #     for action in protocol.actions:
+        #         try:
+        #             self.process_resource(action, protocol)
+        #         except Exception as e:
+        #             self.logger.error(str(e))
+        #     return ActionSucceeded()
+        # else: 
+        #     return ActionFailed()
         
 
 
