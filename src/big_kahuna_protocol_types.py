@@ -7,6 +7,19 @@ from pydantic.types import Discriminator, Tag
 from typing import Annotated, Union, Optional
 
 
+class BigKahunaTags(str, Enum):
+   SkipMap =  "SkipMap"  # short codes for common LS design tags
+   SyringePump = "SyringePump"
+   ExtSingleTip = "ExtSingleTip"
+   SingleTip = "SingleTip"
+   Chaser = "Chaser"
+   FourTip = "4Tip"
+   Backsolvent = "Backsolvent"
+   LookAhead = "LookAhead"
+   SkipWash = "SkipWash"
+   Image = "Image"
+   Processing = "Processing"
+
 
 class BigKahunaParameter(BaseModel):
     name: str = Field(
@@ -116,10 +129,10 @@ class BigKahunaTransfer(BigKahunaAction):
         title="Transfer Volume",
         description="The volume for the transfer"
         )
-    tag_code: str = Field(
+    tags: list[BigKahunaTags] = Field(
         title="Tag Code",
         description="The Big Kahuna Specific Tags for the transfer",
-        default="1tip"
+        default=[]
         )
 
 
@@ -145,10 +158,10 @@ class BigKahunaDispense(BigKahunaAction):
         title="Target Volume",
         description="The volume to dispense"
         )
-    tag_code: str = Field(
+    tags: list[BigKahunaTags] = Field(
         title="Tag Code",
         description="The Big Kahuna Specific Tags for the transfer",
-        default="1tip"
+        default=[]
         )
 
 class BigKahunaPause(BigKahunaAction):
