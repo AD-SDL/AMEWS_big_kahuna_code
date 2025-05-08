@@ -71,8 +71,8 @@ class BigKahunaNode(RestNode):
         for chemical in protocol.chemicals:
             plate =  protocol.plates[chemical.source_plate]
             library_studio.add_chemical(plate, chemical.name, chemical.row, chemical.column, chemical.color, chemical.volume)
-        for action in protocol.actions:
-            self.add_step(action, library_studio)
+        for protocol_action in protocol.actions:
+            self.add_step(protocol_action, library_studio)
         library_studio.finish(protocol.plates)
         library_studio.as_prep()
         success = library_studio.as_execute()

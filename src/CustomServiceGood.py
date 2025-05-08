@@ -377,30 +377,13 @@ class LS10:  # LS API wrapper calls
         q = self.van_der_corput(index)
         return self.rgb_to_uint(*self.cmap(1 - q))
 
-    def to_tag(self, code):  # tag code word to a full tag
-        if "_" in code:
-            code = code.split("_")
-            key = code[1].upper()
-            base = code[0]
-        else:
-            base = code
-            key = ""
+    def to_tag(tags):  # tag code word to a full tag
+        tag_string  = ""
+        for tag in tags:
+            tag_string.append(str(tag))
+            if tag != tags[-1]:
+                tag_string.append(",")
 
-        if len(base) == 0:
-            base = "Processing"
-        if base not in self.TAGS:
-            return ""
-        else:
-            base = self.TAGS[base]
-        if "S" in key:
-            base += ",Backsolvent"
-        if "L" in key:
-            base += ",LookAhead"
-        if "W" in key:
-            base += ",SkipWash"
-        if "I" in key:
-            base += ",Image"
-        return base
 
     def HandleStatus(self, status):  # error messages
         self.status = status
@@ -417,10 +400,7 @@ class LS10:  # LS API wrapper calls
         now = datetime.now()
         return now.strftime("%Y%m%d_%H%M%S")
 
-    def xml(self, type):  # name xml files
-        return "%s_%s.xml" % (type, self.stamp)
 
-       
     def add_library(self, name: str, rows: int, columns: int, color: int):  # add substrate
             status = self.ls.AddLibrary(
             name,
@@ -495,10 +475,6 @@ class LS10:  # LS API wrapper calls
     ):
             self.ls.AddChemical(chemical_name, color, self.units)
 
-            if row == 0 or col == 0:
-                well = "off deck"
-            else:
-                well = self.utils.tuple2well(row, col)
 
             self.promptsfile.AddInitialSourceState(source_plate.deck_position, "None")  # not covered
             # self.tracker.report(ID)
@@ -521,13 +497,13 @@ class LS10:  # LS API wrapper calls
         add_to,  # plate to add
         range_str,  # wells
         volume,  # volume
-        tag_code="1tip",
+        tags=[],
         opt=False,  # adds to mapped chemicals for chemfile
         layerIdx=-1,  # if positive edits the map
     ):
         wells = self.utils.WellRangeFromString(range_str)
         values = self.utils.UniformValues(wells.Count, volume)
-        tag = self.to_tag(tag_code)
+        tag = self.to_tag(tags)
         i = layerIdx
 
         if layerIdx < 0:
@@ -559,35 +535,7 @@ class LS10:  # LS API wrapper calls
             )
 
         self.HandleStatus(status)
-        if self.verbose:
-            print(
-                "sourced %d %s of %s :: %s, wells = %s :: %s"
-                % (int(volume), self.units, chem, add_to, range_str, tag)
-            )
 
-        source, source_well = self.sources[chem]
-        self.map_substrates[self.map_count] = [source, add_to]
-
-        if "Chaser" not in tag:
-            if source:
-                component_ID = "%s:%s" % (source, source_well)
-            else:
-                component_ID = chem
-
-            for row, col in self.utils.wells:
-                well = self.utils.tuple2well(row, col)
-                ID = "%s:%s" % (add_to, well)
-                # self.tracker.report(ID)
-
-        if opt and layerIdx < 0:
-            self.chem[self.map_count] = (
-                chem,
-                source,
-                source_well,
-                add_to,
-                range_str,
-                volume,
-            )
 
         if layerIdx < 0:
             self.map_count += 1
@@ -601,7 +549,7 @@ class LS10:  # LS API wrapper calls
         source_well,  # well
         target_well,  # well
         volume,  # volume
-        tag_code="1tip",
+        tags=[],
         layerIdx=-1,
     ):
         
@@ -622,7 +570,7 @@ class LS10:  # LS API wrapper calls
                 p_to,
                 volume,
                 values,
-                self.to_tag(tag_code),
+                self.to_tag(tags),
                 self.map_count,
             )
             i = self.map_count
@@ -638,15 +586,12 @@ class LS10:  # LS API wrapper calls
                 p_to,
                 volume,
                 values,
-                self.to_tag(tag_code),
+                self.to_tag(tags),
                 layerIdx,
                 1,
             )
 
         self.HandleStatus(status)
-
-        ID = "%s:%s" % (target_plate, target_well)
-        component_ID = "%s:%s" % (source_plate, source_well)
 
 
         # self.tracker.report(ID)
@@ -724,17 +669,7 @@ class LS10:  # LS API wrapper calls
             print("set stirring rate for %s at %g rpm" % (plate, rate))
 
 
-    def modify_tag_code(
-        self, code, letter
-    ):  # add a letter coded option to the tag code, can be more than one letter
-        if "_" in code:
-            base, key = code.split("_")
-            if letter not in key:
-                key += letter
-            return "%s_%s" % (base, key)
-        else:
-            return "%s_%s" % (code, letter)
-
+ 
     def from_db(self, lib_ID):  # get the parameter list
         self.design = self.ls.GetDesignFromDatabase(lib_ID, False)
         self.ID = lib_ID
