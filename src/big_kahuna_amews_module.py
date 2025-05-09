@@ -10,6 +10,7 @@ from madsci.common.types.admin_command_types import AdminCommandResponse
 from madsci.common.types.node_types import RestNodeConfig
 from madsci.node_module.helpers import action
 from madsci.node_module.rest_node_module import RestNode
+import json
 from BK_AMEWS_6cells import AMEWS
 import os
 
@@ -50,6 +51,8 @@ class BigKahunaNode(RestNode):
     ) -> ActionResult:
         """Copy results for the current container to storage"""
         amews = AMEWS()
+        if type(info) == str:
+            info = json.loads(info)
         new_info = amews.AS_fill(info)
         log_file = os.path.join(amews.ld.dir, amews.ld.as10.log)
         excerpt_file_name = "%s.csv" % amews.ld.as10.asl.excerpt_name

@@ -1,5 +1,6 @@
 
 
+from enum import Enum
 from madsci.common.types.base_types import BaseModel
 from typing import Literal
 from pydantic import Field
@@ -78,9 +79,10 @@ class BigKahunaChemical(BaseModel):
         description = "Name of the plate the chemical is stored in",
         default=None
     )
-    deck_position: str = Field(
+    deck_position: Optional[str] = Field(
             title="Deck Position",
-            description="The position of the chemical on the deck"
+            description="The position of the chemical on the deck",
+            default=None
         )
     row: int = Field(
          title="Chemical Row",
@@ -100,7 +102,7 @@ class BigKahunaChemical(BaseModel):
 
 class BigKahunaAction(BaseModel):
     """a general big kahuna action"""
-    action_type: str = Field(
+    action_type: Literal["action"] = Field(
         title="Action Type",
         description="The type of the action",
         default="action"

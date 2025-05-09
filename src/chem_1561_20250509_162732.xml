@@ -1,0 +1,85 @@
+<Symyx.AutomationStudio.Core.ChemicalManager>
+	<Symyx.AutomationStudio.Core.ChemicalManager.Chemicals>
+<Symyx.AutomationStudio.Core.ChemicalManager.Chemical>
+  <Name>solvent</Name>
+  <AmountLeft>-1.0</AmountLeft>
+  <Color>0</Color>
+  <Column>0</Column>
+  <Columns>0</Columns>
+  <Empty>False</Empty>
+  <Questionable>False</Questionable>
+  <Row>0</Row>
+  <Rows>0</Rows>
+  <Size>0</Size>
+  <SubstratePosition/>
+  <SubstrateType/>
+  <Type>stBackingSolvent</Type>
+  <ValveResource>Syringe 1</ValveResource>
+  <ValvePosition>1</ValvePosition>
+  <Units>undefined</Units>
+</Symyx.AutomationStudio.Core.ChemicalManager.Chemical>
+<Symyx.AutomationStudio.Core.ChemicalManager.Chemical>
+  <Name>standard</Name>
+  <AmountLeft>-1.0</AmountLeft>
+  <Color>0</Color>
+  <Column>0</Column>
+  <Columns>0</Columns>
+  <Empty>False</Empty>
+  <Questionable>False</Questionable>
+  <Row>0</Row>
+  <Rows>0</Rows>
+  <Size>0</Size>
+  <SubstratePosition/>
+  <SubstrateType/>
+  <Type>stNormal</Type>
+  <ValveResource/>
+  <ValvePosition>0</ValvePosition>
+  <Units>undefined</Units>
+</Symyx.AutomationStudio.Core.ChemicalManager.Chemical>
+<Symyx.AutomationStudio.Core.ChemicalManager.Chemical>
+  <Name>cell_plate_1</Name>
+  <AmountLeft>-1</AmountLeft>
+  <Color>0</Color>
+  <Column>0</Column>
+  <Columns>0</Columns>
+  <Empty>False</Empty>
+  <Questionable>False</Questionable>
+  <Row>0</Row>
+  <Rows>0</Rows>
+  <Size>0</Size>
+  <SubstratePosition>Deck 12-13 Heat-Cool-Stir 1</SubstratePosition>
+  <SubstrateType>Rack 3x4 six Kaufmann H-cells</SubstrateType>
+  <Type>stPlate</Type>
+  <ValveResource/>
+  <ValvePosition>0</ValvePosition>
+  <Units>undefined</Units>
+</Symyx.AutomationStudio.Core.ChemicalManager.Chemical>
+	</Symyx.AutomationStudio.Core.ChemicalManager.Chemicals>
+	<Symyx.AutomationStudio.Core.ChemicalManager.Libraries>
+		<Symyx.AutomationStudio.Core.ChemicalManager.Library>
+			<LibraryID>7491</LibraryID>
+			<Name>ICP_rack</Name>
+			<NumOfRows>6</NumOfRows>
+			<NumOfCols>15</NumOfCols>
+			<SubstrateType>Rack 6x15 ICP robotic</SubstrateType>
+			<SubstratePosition>Deck 16-17 Waste 1</SubstratePosition>
+			<Symyx.AutomationStudio.Core.ChemicalManager.Wells />
+		</Symyx.AutomationStudio.Core.ChemicalManager.Library>
+		<Symyx.AutomationStudio.Core.ChemicalManager.Library>
+			<LibraryID>7493</LibraryID>
+			<Name>cell_plate_1</Name>
+			<NumOfRows>3</NumOfRows>
+			<NumOfCols>4</NumOfCols>
+			<SubstrateType>Rack 3x4 six Kaufmann H-cells</SubstrateType>
+			<SubstratePosition>Deck 12-13 Heat-Cool-Stir 1</SubstratePosition>
+			<Symyx.AutomationStudio.Core.ChemicalManager.Wells />
+		</Symyx.AutomationStudio.Core.ChemicalManager.Library>
+	</Symyx.AutomationStudio.Core.ChemicalManager.Libraries>
+</Symyx.AutomationStudio.Core.ChemicalManager>
+<ChemicalsAndAssociatedDispenseModes>
+<ChemicalManager>
+  <Chemical Name="solvent" Mode="factory setting|ADT" />
+  <Chemical Name="standard" Mode="factory setting|ADT" />
+  <Chemical Name="cell_plate_1" Mode="factory setting|ADT" />
+</ChemicalManager>
+</ChemicalsAndAssociatedDispenseModes>

@@ -605,7 +605,7 @@ class AMEWS:
         if j:
             self.from_json(j)
         self.LS_blank()
-        self.AS_execute("blank1")
+       # self.AS_execute("blank1")
         return self.to_json()
 
     def AS_fill(self, j=None, index=1):  # collect feeds

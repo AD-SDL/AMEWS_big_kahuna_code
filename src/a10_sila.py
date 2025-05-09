@@ -208,7 +208,7 @@ class CustomAS10:  # v is verbosity
             self.check = "invalid design ID"
             print(self.check)
             return 1
-
+        self.es.SetPrompts(promptsfile).ReturnValue
         if self.checkResult(self.es.SetPrompts(promptsfile).ReturnValue):
             self.check = "invalid promptsf file"
             print(self.check)

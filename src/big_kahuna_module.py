@@ -19,19 +19,19 @@ from madsci.common.types.resource_types.definitions import (
 
 from madsci.common.types.resource_types import ContinuousConsumable
 from madsci.common.types.resource_types.definitions import ContinuousConsumableResourceDefinition
-from big_kahuna_protocol_types import BigKahunaProtocol, BigKahunaAction
+from big_kahuna_protocol_types import BigKahunaPlate, BigKahunaProtocol, BigKahunaAction
 from madsci.client.resource_client import ResourceClient
-from CustomServiceGood import LS10
+from CustomServiceNew import LS10
 import os
 
 
 
 class BigKahunaConfig(RestNodeConfig):
     """Configuration for a Big Kahuna Node"""
-    directory: str
-    resource_server_url: Optional[str]
-    deck_locations: Optional[list[str]]
-    chemical_sources: Optional[list[ContinuousConsumableResourceDefinition]]
+    # directory: str
+    # resource_server_url: Optional[str]
+    # deck_locations: Optional[list[str]]
+    # chemical_sources:   Optional[list[ContinuousConsumableResourceDefinition]]
 
     
 
@@ -41,19 +41,20 @@ class BigKahunaNode(RestNode):
 
     config_model = BigKahunaConfig
     def startup_handler(self):
-        if self.config.resource_server_url:
-            self.resource_client = ResourceClient(self.config.resource_server_url)
-            self.resource_owner = OwnershipInfo(node_id=self.node_definition.node_id)
-            for location in self.config.deck_locations:
-                rec_def = SlotResourceDefinition(
-                    resource_name= self.config.node_name + "_" + location,
-                    owner=self.resource_owner,
-                )
+        pass
+        # if self.config.resource_server_url:
+        #     self.resource_client = ResourceClient(self.config.resource_server_url)
+        #     self.resource_owner = OwnershipInfo(node_id=self.node_definition.node_id)
+        #     for location in self.config.deck_locations:
+        #         rec_def = SlotResourceDefinition(
+        #             resource_name= self.config.node_name + "_" + location,
+        #             owner=self.resource_owner,
+        #         )
 
-                self.resource_client.init_resource(rec_def)
-            for source in self.config.chemical_sources:
-                source.owner = self.resource_owner
-                self.resource_client.init_resource(source)
+        #         self.resource_client.init_resource(rec_def)
+        #     for source in self.config.chemical_sources:
+        #         source.owner = self.resource_owner
+        #         self.resource_client.init_resource(source)
             
     @action
     def run_protocol(
@@ -61,7 +62,8 @@ class BigKahunaNode(RestNode):
         protocol: BigKahunaProtocol,
     ) -> ActionResult:
         """generate a library studio protocol"""
-        library_studio = LS10(self.config.directory)
+        protocol = BigKahunaProtocol.model_validate(protocol)
+        library_studio = LS10()
         library_studio.create_lib(protocol.name)
         library_studio.units = protocol.units
         for parameter in protocol.parameters:
@@ -69,32 +71,34 @@ class BigKahunaNode(RestNode):
         for name, library in protocol.plates.items():
             library_studio.add_library(library.name, library.rows, library.columns, library.color)
         for chemical in protocol.chemicals:
-            plate =  protocol.plates[chemical.source_plate]
+            if chemical.source_plate is not None:
+                plate =  protocol.plates[chemical.source_plate]
+            else:
+                plate = None
             library_studio.add_chemical(plate, chemical.name, chemical.row, chemical.column, chemical.color, chemical.volume)
         for protocol_action in protocol.actions:
-            self.add_step(protocol_action, library_studio)
+            self.add_step(protocol_action, library_studio, protocol.plates)
         library_studio.finish(protocol.plates)
+        library_studio.as_prep()
+        success = library_studio.as_execute()
+        if success and self.resource_client:
+            for action in protocol.actions:
+                try:
+                    self.process_resource(action, protocol)
+                except Exception as e:
+                    self.logger.error(str(e))
         return ActionSucceeded()
-        # library_studio.as_prep()
-        # success = library_studio.as_execute()
-        # if success and self.resource_client:
-        #     for action in protocol.actions:
-        #         try:
-        #             self.process_resource(action, protocol)
-        #         except Exception as e:
-        #             self.logger.error(str(e))
-        #     return ActionSucceeded()
         # else: 
         #     return ActionFailed()
         
 
 
    
-    def add_step(action: BigKahunaAction, library_studio: LS10):
+    def add_step(self, action: BigKahunaAction, library_studio: LS10, plates: dict[str, BigKahunaPlate]):
         if action.action_type == "transfer":
-            library_studio.single_well_transfer(action.source_plate, action.target_plate, action.source_well, action.target_well, action.volume, action.tag_code)
+            library_studio.single_well_transfer(action.source_plate, action.target_plate, action.source_well, action.target_well, action.volume, action.tags, -1,  plates)
         elif action.action_type == "dispense":
-            library_studio.dispense_chem(action.source_chemical, action.target_plate, action.target_well, action.volume, action.tag_code)
+            library_studio.dispense_chem(action.source_chemical, action.target_plate, action.target_well, action.volume, action.tags)
         elif action.action_type == "pause":
             library_studio.Pause(action.target_plate, action.code)
         elif action.action_type == "delay":

@@ -216,9 +216,9 @@ class ChemFile:  # chemcial manager xml file, consists of four sections that are
 
 
 class LS10:  # LS API wrapper calls
-    def __init__(self, config):
+    def __init__(self):
         # general settings
-        self.path = "."
+        self.path = os.getcwd()
         self.chemfile = ChemFile()
         self.promptsfile = PromptsFile()
         self._prompts = os.path.join(
@@ -236,7 +236,7 @@ class LS10:  # LS API wrapper calls
         self.project = "auto"  # default project name
         self.name = ""  # default name
         self.ID = 0  # database ID for the design
-        self.sources = {}  # source dictionary
+        self.sources = []  # source dictionary
         self.chem = {}  # chemicals dictionary
         self.utils = CustomUtils()
         self.status = 0  # database addition status
@@ -319,7 +319,7 @@ class LS10:  # LS API wrapper calls
         if self.verbose:
             print("create design %s in project %s" % (name, self.project))
         status = self.ls.CreateNewDesign(
-            name, self.project, "", "", "", "", "", "created on %s" % self.stamp
+            name, self.project, "", "", "", "", "", "created on %s" % str(datetime.now())
         )
         self.HandleStatus(status)
         self.name = name
@@ -377,13 +377,13 @@ class LS10:  # LS API wrapper calls
         q = self.van_der_corput(index)
         return self.rgb_to_uint(*self.cmap(1 - q))
 
-    def to_tag(tags):  # tag code word to a full tag
+    def to_tag(self, tags):  # tag code word to a full tag
         tag_string  = ""
         for tag in tags:
-            tag_string.append(str(tag))
+            tag_string += (tag.value)
             if tag != tags[-1]:
-                tag_string.append(",")
-
+                tag_string += ","
+        return tag_string
 
     def HandleStatus(self, status):  # error messages
         self.status = status
@@ -461,7 +461,14 @@ class LS10:  # LS API wrapper calls
         with open(c, "wb") as f:
             tree.write(f, encoding="utf-8", xml_declaration=True)
 
-    
+    def add_plate_source(
+            self,
+            source_plate,
+            chemical_name,
+            mode="factory setting|ADT"
+    ):
+        self.AddSource(source_plate.name, chemical_name, source_plate.type, source_plate.deck_position, 0, 0, 0, -1)
+        self.chemfile.AddChemical(chemical_name, mode)
 
     def add_chemical(
         self,
@@ -474,13 +481,18 @@ class LS10:  # LS API wrapper calls
         mode="factory setting|ADT",  # dispense mode # adds a new chemical with a source,
     ):
             self.ls.AddChemical(chemical_name, color, self.units)
+            if source_plate is not None:
+                self.promptsfile.AddInitialSourceState(source_plate.deck_position, "None")  # not covered
+                # self.tracker.report(ID)
 
+    
+                self.AddSource(source_plate.name, chemical_name, source_plate.type, source_plate.deck_position, color, row, col, volume)
+            else: 
+                self.promptsfile.AddInitialSourceState(None, "None")  # not covered
+                # self.tracker.report(ID)
 
-            self.promptsfile.AddInitialSourceState(source_plate.deck_position, "None")  # not covered
-            # self.tracker.report(ID)
-
-  
-            self.AddSource(source_plate.name, chemical_name, source_plate.type, source_plate.deck_position, color, row, col, volume)
+    
+                self.AddSource(None, chemical_name, None, None, color, row, col, volume)
             self.chemfile.AddChemical(chemical_name, mode)
 
             self.lib_count += 1
@@ -551,7 +563,13 @@ class LS10:  # LS API wrapper calls
         volume,  # volume
         tags=[],
         layerIdx=-1,
-    ):
+        plates = None
+    ):  
+        if source_plate not in self.sources:
+            self.sources.append(source_plate)
+            full_plate = plates[source_plate]
+            print(full_plate)
+            self.add_plate_source(full_plate, source_plate)
         
         p_from = self.utils.well2point(source_well)
         p_to = self.utils.well2point(target_well)
@@ -740,6 +758,7 @@ class LS10:  # LS API wrapper calls
         self, isnew, plates
     ):  # adds to database and uses library IDs to complete records
         self.ID = self.to_db(isnew)
+        print(self.ID)
         if self.ID < 0:
             self.HandleStatus(self.ID)
             print("\nCAUTION: fakes ID's to complete xml records for AS\n")
@@ -790,7 +809,8 @@ class LS10:  # LS API wrapper calls
             if not os.path.exists(self.dir):
                 os.makedirs(self.dir)
 
-    
+    def xml(self, type):  # name xml files
+        return "%s_%s.xml" % (type, self.tstamp())
 
     def finish_files(self):  # write AS files
         self._prompts = os.path.join(self.dir, self.xml("prompts_%d" % self.ID))
