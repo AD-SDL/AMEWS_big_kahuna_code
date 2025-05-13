@@ -1,0 +1,7 @@
+index,datetime,volume,chaser,plate from,well from,plate to,well to
+1,05/09/2025 16:49:09,250,2200,"Rack 3x4 six Kaufmann H-cells, Deck 12-13 Heat-Cool-Stir 1",A1,"Rack 6x15 ICP robotic, Deck 16-17 Waste 1",A1
+2,05/09/2025 16:52:01,250,2200,"Rack 3x4 six Kaufmann H-cells, Deck 12-13 Heat-Cool-Stir 1",A2,"Rack 6x15 ICP robotic, Deck 16-17 Waste 1",A2
+3,05/09/2025 16:54:52,250,2200,"Rack 3x4 six Kaufmann H-cells, Deck 12-13 Heat-Cool-Stir 1",B1,"Rack 6x15 ICP robotic, Deck 16-17 Waste 1",A3
+4,05/09/2025 16:57:45,250,2200,"Rack 3x4 six Kaufmann H-cells, Deck 12-13 Heat-Cool-Stir 1",B2,"Rack 6x15 ICP robotic, Deck 16-17 Waste 1",A4
+5,05/09/2025 17:00:37,250,2200,"Rack 3x4 six Kaufmann H-cells, Deck 12-13 Heat-Cool-Stir 1",C1,"Rack 6x15 ICP robotic, Deck 16-17 Waste 1",A5
+6,05/09/2025 17:03:27,250,2200,"Rack 3x4 six Kaufmann H-cells, Deck 12-13 Heat-Cool-Stir 1",C2,"Rack 6x15 ICP robotic, Deck 16-17 Waste 1",A6

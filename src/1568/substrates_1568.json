@@ -1,0 +1,18 @@
+{
+    "source1": {
+        "rows": 2,
+        "columns": 4,
+        "position": "Deck 10-11 Position 2",
+        "kind": "Rack 2x4 20mL Vial",
+        "type": "source",
+        "status": "UsedByBK"
+    },
+    "plate1": {
+        "rows": 3,
+        "columns": 4,
+        "position": "Deck 12-13 Heat-Cool-Stir 1",
+        "kind": "Rack 3x4 six Kaufmann H-cells",
+        "type": "sample",
+        "status": "UsedByBK"
+    }
+}

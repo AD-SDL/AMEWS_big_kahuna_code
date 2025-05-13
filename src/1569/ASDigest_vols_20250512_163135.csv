@@ -1,0 +1,3 @@
+index,datetime,volume,chaser,plate from,well from,plate to,well to
+1,05/12/2025 16:34:38,250,2200,plate1,A3,ICP1,A3
+2,05/12/2025 16:39:37,250,2200,plate1,B3,ICP1,A4
