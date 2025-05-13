@@ -1,0 +1,9 @@
+		<Symyx.AutomationStudio.Core.ChemicalManager.Library>
+			<LibraryID><!-- LibraryID --></LibraryID>
+			<Name><!-- Name --></Name>
+			<NumOfRows><!-- NumOfRows --></NumOfRows>
+			<NumOfCols><!-- NumOfCols --></NumOfCols>
+			<SubstrateType><!-- SubstrateType --></SubstrateType>
+			<SubstratePosition><!-- SubstratePosition --></SubstratePosition>
+			<Symyx.AutomationStudio.Core.ChemicalManager.Wells />
+		</Symyx.AutomationStudio.Core.ChemicalManager.Library>
