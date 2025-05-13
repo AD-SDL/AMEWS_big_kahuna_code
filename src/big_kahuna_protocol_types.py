@@ -1,11 +1,11 @@
 
 
-from enum import Enum
 from madsci.common.types.base_types import BaseModel
 from typing import Literal
 from pydantic import Field
 from pydantic.types import Discriminator, Tag
 from typing import Annotated, Union, Optional
+from enum import Enum
 
 
 class BigKahunaTags(str, Enum):
