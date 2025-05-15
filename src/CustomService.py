@@ -938,8 +938,7 @@ class CustomLS10:  # LS API wrapper calls
                 "transfers %d %s from %s, well = %s -> %s, well = %s :: %s"
                 % (int(volume), self.units, add_from, well_from, add_to, well_to, tag)
             )
-        if delay > 0:  # delay time in min
-            self.Delay(add_to, delay)
+       
         self.log_composition(add_from, add_to, well_from, well_to)
         return i
 
@@ -1024,7 +1023,8 @@ class CustomLS10:  # LS API wrapper calls
             self.tm.df.loc[i, "chaser"] = chaser
             self.tm.df.loc[i, "map"] = self.map_count
             i += 1
-
+        if d > 0:  # delay time in min
+            self.Delay(add_to, d)
         # add compositions of to and from wells AFTER each transfer
 
         self.log_map()

@@ -23,6 +23,7 @@ from big_kahuna_protocol_types import BigKahunaPlate, BigKahunaProtocol, BigKahu
 from madsci.client.resource_client import ResourceClient
 from CustomServiceNew import LS10
 import os
+from log_parsing import read_logs
 
 
 
@@ -69,7 +70,8 @@ class BigKahunaNode(RestNode):
         for parameter in protocol.parameters:
             library_studio.add_param(parameter.name, parameter.type, parameter.unit)
         for name, library in protocol.plates.items():
-            library_studio.add_library(library.name, library.rows, library.columns, library.color)
+            if library.source == False:
+                library_studio.add_library(library.name, library.rows, library.columns, library.color)
         for chemical in protocol.chemicals:
             if chemical.source_plate is not None:
                 plate =  protocol.plates[chemical.source_plate]
@@ -81,15 +83,19 @@ class BigKahunaNode(RestNode):
         library_studio.finish(protocol.plates)
         library_studio.as_prep()
         success = library_studio.as_execute()
-        if success and self.resource_client:
-            for action in protocol.actions:
-                try:
-                    self.process_resource(action, protocol)
-                except Exception as e:
-                    self.logger.error(str(e))
-        return ActionSucceeded()
-        # else: 
-        #     return ActionFailed()
+        if success:
+            file_path = os.path.join(library_studio.dir,library_studio.as10.log)
+            steps = read_logs(file_path)
+            steps = [step.model_dump() for step in steps]
+        # if success and self.resource_client:
+        #     for action in protocol.actions:
+        #         try:
+        #             self.process_resource(action, protocol)
+        #         except Exception as e:
+        #             self.logger.error(str(e))
+            return ActionSucceeded(data={"parsed_log": steps}, files={"log_file": file_path})
+        else: 
+             return ActionFailed()
         
 
 

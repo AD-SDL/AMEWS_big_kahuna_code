@@ -63,6 +63,11 @@ class BigKahunaPlate(BaseModel):
         description = "Color of the plate to display in library studio",
         default = 0x000000
     )
+    source: bool = Field(
+        title="Source",
+        description="Whether or not the plate is used for source chemicals, does not add to libraries if true",
+        default=False
+    )
 
 class BigKahunaChemical(BaseModel):
     name: str = Field(
