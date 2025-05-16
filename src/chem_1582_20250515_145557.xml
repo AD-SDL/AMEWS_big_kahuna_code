@@ -1,0 +1,171 @@
+<Symyx.AutomationStudio.Core.ChemicalManager>
+	<Symyx.AutomationStudio.Core.ChemicalManager.Chemicals>
+<Symyx.AutomationStudio.Core.ChemicalManager.Chemical>
+  <Name>mixture_1</Name>
+  <AmountLeft>10000.0</AmountLeft>
+  <Color>0</Color>
+  <Column>0</Column>
+  <Columns>0</Columns>
+  <Empty>False</Empty>
+  <Questionable>False</Questionable>
+  <Row>0</Row>
+  <Rows>0</Rows>
+  <Size>11000.0</Size>
+  <SubstratePosition>Deck 10-11 Position 2</SubstratePosition>
+  <SubstrateType>Rack 2x4 20mL Vial</SubstrateType>
+  <Type>stNormal</Type>
+  <ValveResource/>
+  <ValvePosition>0</ValvePosition>
+  <Units>ul</Units>
+</Symyx.AutomationStudio.Core.ChemicalManager.Chemical>
+<Symyx.AutomationStudio.Core.ChemicalManager.Chemical>
+  <Name>mixture_2</Name>
+  <AmountLeft>10000.0</AmountLeft>
+  <Color>0</Color>
+  <Column>1</Column>
+  <Columns>0</Columns>
+  <Empty>False</Empty>
+  <Questionable>False</Questionable>
+  <Row>0</Row>
+  <Rows>0</Rows>
+  <Size>11000.0</Size>
+  <SubstratePosition>Deck 10-11 Position 2</SubstratePosition>
+  <SubstrateType>Rack 2x4 20mL Vial</SubstrateType>
+  <Type>stNormal</Type>
+  <ValveResource/>
+  <ValvePosition>0</ValvePosition>
+  <Units>ul</Units>
+</Symyx.AutomationStudio.Core.ChemicalManager.Chemical>
+<Symyx.AutomationStudio.Core.ChemicalManager.Chemical>
+  <Name>mixture_3</Name>
+  <AmountLeft>10000.0</AmountLeft>
+  <Color>0</Color>
+  <Column>2</Column>
+  <Columns>0</Columns>
+  <Empty>False</Empty>
+  <Questionable>False</Questionable>
+  <Row>0</Row>
+  <Rows>0</Rows>
+  <Size>11000.0</Size>
+  <SubstratePosition>Deck 10-11 Position 2</SubstratePosition>
+  <SubstrateType>Rack 2x4 20mL Vial</SubstrateType>
+  <Type>stNormal</Type>
+  <ValveResource/>
+  <ValvePosition>0</ValvePosition>
+  <Units>ul</Units>
+</Symyx.AutomationStudio.Core.ChemicalManager.Chemical>
+<Symyx.AutomationStudio.Core.ChemicalManager.Chemical>
+  <Name>mixture_4</Name>
+  <AmountLeft>10000.0</AmountLeft>
+  <Color>0</Color>
+  <Column>3</Column>
+  <Columns>0</Columns>
+  <Empty>False</Empty>
+  <Questionable>False</Questionable>
+  <Row>0</Row>
+  <Rows>0</Rows>
+  <Size>11000.0</Size>
+  <SubstratePosition>Deck 10-11 Position 2</SubstratePosition>
+  <SubstrateType>Rack 2x4 20mL Vial</SubstrateType>
+  <Type>stNormal</Type>
+  <ValveResource/>
+  <ValvePosition>0</ValvePosition>
+  <Units>ul</Units>
+</Symyx.AutomationStudio.Core.ChemicalManager.Chemical>
+<Symyx.AutomationStudio.Core.ChemicalManager.Chemical>
+  <Name>mixture_5</Name>
+  <AmountLeft>10000.0</AmountLeft>
+  <Color>0</Color>
+  <Column>0</Column>
+  <Columns>0</Columns>
+  <Empty>False</Empty>
+  <Questionable>False</Questionable>
+  <Row>1</Row>
+  <Rows>0</Rows>
+  <Size>11000.0</Size>
+  <SubstratePosition>Deck 10-11 Position 2</SubstratePosition>
+  <SubstrateType>Rack 2x4 20mL Vial</SubstrateType>
+  <Type>stNormal</Type>
+  <ValveResource/>
+  <ValvePosition>0</ValvePosition>
+  <Units>ul</Units>
+</Symyx.AutomationStudio.Core.ChemicalManager.Chemical>
+<Symyx.AutomationStudio.Core.ChemicalManager.Chemical>
+  <Name>mixture_6</Name>
+  <AmountLeft>10000.0</AmountLeft>
+  <Color>0</Color>
+  <Column>1</Column>
+  <Columns>0</Columns>
+  <Empty>False</Empty>
+  <Questionable>False</Questionable>
+  <Row>1</Row>
+  <Rows>0</Rows>
+  <Size>11000.0</Size>
+  <SubstratePosition>Deck 10-11 Position 2</SubstratePosition>
+  <SubstrateType>Rack 2x4 20mL Vial</SubstrateType>
+  <Type>stNormal</Type>
+  <ValveResource/>
+  <ValvePosition>0</ValvePosition>
+  <Units>ul</Units>
+</Symyx.AutomationStudio.Core.ChemicalManager.Chemical>
+<Symyx.AutomationStudio.Core.ChemicalManager.Chemical>
+  <Name>mixture_7</Name>
+  <AmountLeft>10000.0</AmountLeft>
+  <Color>0</Color>
+  <Column>2</Column>
+  <Columns>0</Columns>
+  <Empty>False</Empty>
+  <Questionable>False</Questionable>
+  <Row>1</Row>
+  <Rows>0</Rows>
+  <Size>11000.0</Size>
+  <SubstratePosition>Deck 10-11 Position 2</SubstratePosition>
+  <SubstrateType>Rack 2x4 20mL Vial</SubstrateType>
+  <Type>stNormal</Type>
+  <ValveResource/>
+  <ValvePosition>0</ValvePosition>
+  <Units>ul</Units>
+</Symyx.AutomationStudio.Core.ChemicalManager.Chemical>
+<Symyx.AutomationStudio.Core.ChemicalManager.Chemical>
+  <Name>mixture_8</Name>
+  <AmountLeft>10000.0</AmountLeft>
+  <Color>0</Color>
+  <Column>3</Column>
+  <Columns>0</Columns>
+  <Empty>False</Empty>
+  <Questionable>False</Questionable>
+  <Row>1</Row>
+  <Rows>0</Rows>
+  <Size>11000.0</Size>
+  <SubstratePosition>Deck 10-11 Position 2</SubstratePosition>
+  <SubstrateType>Rack 2x4 20mL Vial</SubstrateType>
+  <Type>stNormal</Type>
+  <ValveResource/>
+  <ValvePosition>0</ValvePosition>
+  <Units>ul</Units>
+</Symyx.AutomationStudio.Core.ChemicalManager.Chemical>
+	</Symyx.AutomationStudio.Core.ChemicalManager.Chemicals>
+	<Symyx.AutomationStudio.Core.ChemicalManager.Libraries>
+		<Symyx.AutomationStudio.Core.ChemicalManager.Library>
+			<LibraryID>7611</LibraryID>
+			<Name>cell_plate_1</Name>
+			<NumOfRows>3</NumOfRows>
+			<NumOfCols>4</NumOfCols>
+			<SubstrateType>Rack 3x4 six Kaufmann H-cells</SubstrateType>
+			<SubstratePosition>Deck 12-13 Heat-Cool-Stir 1</SubstratePosition>
+			<Symyx.AutomationStudio.Core.ChemicalManager.Wells />
+		</Symyx.AutomationStudio.Core.ChemicalManager.Library>
+	</Symyx.AutomationStudio.Core.ChemicalManager.Libraries>
+</Symyx.AutomationStudio.Core.ChemicalManager>
+<ChemicalsAndAssociatedDispenseModes>
+<ChemicalManager>
+  <Chemical Name="mixture_1" Mode="factory setting|ADT" />
+  <Chemical Name="mixture_2" Mode="factory setting|ADT" />
+  <Chemical Name="mixture_3" Mode="factory setting|ADT" />
+  <Chemical Name="mixture_4" Mode="factory setting|ADT" />
+  <Chemical Name="mixture_5" Mode="factory setting|ADT" />
+  <Chemical Name="mixture_6" Mode="factory setting|ADT" />
+  <Chemical Name="mixture_7" Mode="factory setting|ADT" />
+  <Chemical Name="mixture_8" Mode="factory setting|ADT" />
+</ChemicalManager>
+</ChemicalsAndAssociatedDispenseModes>

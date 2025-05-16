@@ -1,0 +1,329 @@
+{
+    "code": "46JL1",
+    "barcode": "000076",
+    "rack": {
+        "name": "Rack 3x4 six Kaufmann H-cells",
+        "type": "ICP12",
+        "instrument": "BK",
+        "position": "Deck 12-13 Heat-Cool-Stir 1",
+        "label": "",
+        "code": null,
+        "holder": null,
+        "items": 12,
+        "layout": "rectangular",
+        "rows": 3,
+        "columns": 4
+    },
+    "route": {
+        "ready": "no",
+        "type": "active",
+        "priority": "clear",
+        "route": [
+            "UR5",
+            "Storage",
+            "UR5",
+            "ICP",
+            "UR5",
+            "Trash"
+        ],
+        "step": 0,
+        "datetimes": []
+    },
+    "creator": {
+        "location": "BK",
+        "position": "Deck 12-13 Heat-Cool-Stir 1",
+        "ID": "plate1",
+        "protocol": 1598,
+        "datetime": "2025-05-16 11:45:50.593712",
+        "content": {
+            "plate1:A1": {
+                "composition": {
+                    "standard": 1.0
+                },
+                "constitution": {
+                    "Y": 10.0
+                },
+                "unit": "ppm",
+                "volume": 100000.0,
+                "timestamp": "20250516_114548",
+                "parents": [
+                    "standard"
+                ],
+                "parent_volumes": [
+                    100000.0
+                ],
+                "type": "feed",
+                "container": "glass vial",
+                "name": ""
+            },
+            "plate1:A3": {
+                "composition": {
+                    "standard": 0.9569377990430622,
+                    "mixture1": 0.0430622009569378
+                },
+                "constitution": {
+                    "Y": 9.569377990430622,
+                    "Li": 8.61244019138756
+                },
+                "unit": "ppm",
+                "volume": 104500.0,
+                "timestamp": "20250516_114549",
+                "parents": [
+                    "standard",
+                    "source1:A1"
+                ],
+                "parent_volumes": [
+                    100000.0,
+                    4500.0
+                ],
+                "type": "feed",
+                "container": "glass vial",
+                "name": ""
+            },
+            "plate1:B1": {
+                "composition": {
+                    "standard": 1.0
+                },
+                "constitution": {
+                    "Y": 10.0
+                },
+                "unit": "ppm",
+                "volume": 100000.0,
+                "timestamp": "20250516_114548",
+                "parents": [
+                    "standard"
+                ],
+                "parent_volumes": [
+                    100000.0
+                ],
+                "type": "feed",
+                "container": "glass vial",
+                "name": ""
+            },
+            "plate1:B3": {
+                "composition": {
+                    "standard": 0.9569377990430622,
+                    "mixture1": 0.021531100478468946,
+                    "mixture4": 0.021531100478468845
+                },
+                "constitution": {
+                    "Y": 9.569377990430622,
+                    "Li": 4.3062200956937895,
+                    "Mg": 4.306220095693769
+                },
+                "unit": "ppm",
+                "volume": 104500.0,
+                "timestamp": "20250516_114549",
+                "parents": [
+                    "standard",
+                    "source1:A1",
+                    "source1:A4"
+                ],
+                "parent_volumes": [
+                    100000.0,
+                    2250.0,
+                    2250.0
+                ],
+                "type": "feed",
+                "container": "glass vial",
+                "name": ""
+            },
+            "plate1:C1": {
+                "composition": {
+                    "standard": 1.0
+                },
+                "constitution": {
+                    "Y": 10.0
+                },
+                "unit": "ppm",
+                "volume": 100000.0,
+                "timestamp": "20250516_114548",
+                "parents": [
+                    "standard"
+                ],
+                "parent_volumes": [
+                    100000.0
+                ],
+                "type": "feed",
+                "container": "glass vial",
+                "name": ""
+            },
+            "plate1:C3": {
+                "composition": {
+                    "standard": 0.9569377990430622,
+                    "mixture1": 0.021531100478468946,
+                    "mixture2": 0.021531100478468845
+                },
+                "constitution": {
+                    "Y": 9.569377990430622,
+                    "Li": 4.3062200956937895,
+                    "Na": 4.306220095693769
+                },
+                "unit": "ppm",
+                "volume": 104500.0,
+                "timestamp": "20250516_114549",
+                "parents": [
+                    "standard",
+                    "source1:A1",
+                    "source1:A2"
+                ],
+                "parent_volumes": [
+                    100000.0,
+                    2250.0,
+                    2250.0
+                ],
+                "type": "feed",
+                "container": "glass vial",
+                "name": ""
+            },
+            "plate1:A2": {
+                "composition": {
+                    "standard": 1.0
+                },
+                "constitution": {
+                    "Y": 10.0
+                },
+                "unit": "ppm",
+                "volume": 100000.0,
+                "timestamp": "20250516_114549",
+                "parents": [
+                    "standard"
+                ],
+                "parent_volumes": [
+                    100000.0
+                ],
+                "type": "feed",
+                "container": "glass vial",
+                "name": ""
+            },
+            "plate1:A4": {
+                "composition": {
+                    "standard": 0.9569377990430622,
+                    "mixture1": 0.021531100478468946,
+                    "mixture3": 0.021531100478468845
+                },
+                "constitution": {
+                    "Y": 9.569377990430622,
+                    "Li": 4.3062200956937895,
+                    "K": 4.306220095693769
+                },
+                "unit": "ppm",
+                "volume": 104500.0,
+                "timestamp": "20250516_114549",
+                "parents": [
+                    "standard",
+                    "source1:A1",
+                    "source1:A3"
+                ],
+                "parent_volumes": [
+                    100000.0,
+                    2250.0,
+                    2250.0
+                ],
+                "type": "feed",
+                "container": "glass vial",
+                "name": ""
+            },
+            "plate1:B2": {
+                "composition": {
+                    "standard": 1.0
+                },
+                "constitution": {
+                    "Y": 10.0
+                },
+                "unit": "ppm",
+                "volume": 100000.0,
+                "timestamp": "20250516_114549",
+                "parents": [
+                    "standard"
+                ],
+                "parent_volumes": [
+                    100000.0
+                ],
+                "type": "feed",
+                "container": "glass vial",
+                "name": ""
+            },
+            "plate1:B4": {
+                "composition": {
+                    "standard": 0.9569377990430622,
+                    "mixture4": 0.0430622009569378
+                },
+                "constitution": {
+                    "Y": 9.569377990430622,
+                    "Mg": 8.61244019138756
+                },
+                "unit": "ppm",
+                "volume": 104500.0,
+                "timestamp": "20250516_114549",
+                "parents": [
+                    "standard",
+                    "source1:A4"
+                ],
+                "parent_volumes": [
+                    100000.0,
+                    4500.0
+                ],
+                "type": "feed",
+                "container": "glass vial",
+                "name": ""
+            },
+            "plate1:C2": {
+                "composition": {
+                    "standard": 1.0
+                },
+                "constitution": {
+                    "Y": 10.0
+                },
+                "unit": "ppm",
+                "volume": 100000.0,
+                "timestamp": "20250516_114549",
+                "parents": [
+                    "standard"
+                ],
+                "parent_volumes": [
+                    100000.0
+                ],
+                "type": "feed",
+                "container": "glass vial",
+                "name": ""
+            },
+            "plate1:C4": {
+                "composition": {
+                    "standard": 0.9569377990430623,
+                    "mixture1": 0.010765550239234438,
+                    "mixture2": 0.010765550239234417,
+                    "mixture3": 0.010765550239234435,
+                    "mixture4": 0.010765550239234423
+                },
+                "constitution": {
+                    "Y": 9.569377990430622,
+                    "Li": 2.153110047846888,
+                    "Na": 2.1531100478468836,
+                    "K": 2.153110047846887,
+                    "Mg": 2.1531100478468845
+                },
+                "unit": "ppm",
+                "volume": 104500.0,
+                "timestamp": "20250516_114549",
+                "parents": [
+                    "standard",
+                    "source1:A1",
+                    "source1:A2",
+                    "source1:A3",
+                    "source1:A4"
+                ],
+                "parent_volumes": [
+                    100000.0,
+                    1125.0,
+                    1125.0,
+                    1125.0,
+                    1125.0
+                ],
+                "type": "feed",
+                "container": "glass vial",
+                "name": ""
+            }
+        }
+    }
+}

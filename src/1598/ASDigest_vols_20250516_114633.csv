@@ -1,0 +1,15 @@
+index,datetime,volume,chaser,plate from,well from,plate to,well to
+1,05/16/2025 11:48:36,2500,,source1,A1,plate1,A3
+2,05/16/2025 11:49:45,2000,,source1,A1,plate1,A3
+3,05/16/2025 11:50:58,2250,,source1,A1,plate1,B3
+4,05/16/2025 11:52:55,2250,,source1,A4,plate1,B3
+5,05/16/2025 11:54:53,2250,,source1,A1,plate1,C3
+6,05/16/2025 11:56:50,2250,,source1,A2,plate1,C3
+7,05/16/2025 11:58:46,2250,,source1,A1,plate1,A4
+8,05/16/2025 12:00:43,2250,,source1,A3,plate1,A4
+9,05/16/2025 12:02:45,2500,,source1,A4,plate1,B4
+10,05/16/2025 12:03:54,2000,,source1,A4,plate1,B4
+11,05/16/2025 12:05:58,1125,,source1,A1,plate1,C4
+12,05/16/2025 12:08:00,1125,,source1,A2,plate1,C4
+13,05/16/2025 12:09:37,1125,,source1,A3,plate1,C4
+14,05/16/2025 12:11:15,1125,,source1,A4,plate1,C4

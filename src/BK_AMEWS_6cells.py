@@ -45,7 +45,7 @@ class AMEWS:
         self.chaser = 2250 # uL chaser 
         self.delay = 20 # minutes to wait after each sampling
         self.laps = 2 # laps of sample collection
-        self.aliquots = [250] # uL aliquots for calibrations - adjust
+        self.aliquots = [25] # uL aliquots for calibrations - adjust
         self.last_container = {} # sample container
         self.std_conc = 300 # concentration of the standard (yittrium)
         self.unit = "ppm" # concentration unit
@@ -331,7 +331,7 @@ class AMEWS:
         #print(self.ld.tracker.samples)
 
     def LS_copy(self, s, opt=0):
-        files = glob(os.path.join(self.ld.dir, s))
+        files = glob.glob(os.path.join(self.ld.dir, s))
         if files: 
             for f in files:
                 if opt:
@@ -486,7 +486,7 @@ class AMEWS:
         self.ld.tm.to_df()
 
         self.ld.transfer_replace_general(volumes, # volumes
-                                        self.chaser, # chaser volume
+                                        2475, # chaser volume
                                         "1tip"
                                         ) 
        

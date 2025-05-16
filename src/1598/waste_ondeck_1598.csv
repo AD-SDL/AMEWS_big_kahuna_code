@@ -1,0 +1,8 @@
+,container,container count,"total volume, mL","solvent, %","standard, %","mixture1, %","mixture2, %","mixture3, %","mixture4, %","mixture5, %","mixture6, %"
+1,glass vial,6,600.0,,100.0,,,,,,
+2,glass vial,1,104.5,,96.0,4.0,,,,,
+3,glass vial,1,104.5,,96.0,2.0,,,2.0,,
+4,glass vial,1,104.5,,96.0,2.0,2.0,,,,
+5,glass vial,1,104.5,,96.0,2.0,,2.0,,,
+6,glass vial,1,104.5,,96.0,,,,4.0,,
+7,glass vial,1,104.5,,96.0,1.0,1.0,1.0,1.0,,

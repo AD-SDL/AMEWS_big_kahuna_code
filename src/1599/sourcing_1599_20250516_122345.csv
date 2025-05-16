@@ -1,0 +1,7 @@
+map,chemical,source,well_from,plate_to,wells_to,volume_to
+14,mixture1,source1,A1,plate1,A3,500
+15,mixture1,source1,A1,plate1,B3,500
+16,mixture1,source1,A1,plate1,C3,500
+17,mixture1,source1,A1,plate1,A4,500
+18,mixture1,source1,A1,plate1,B4,500
+19,mixture1,source1,A1,plate1,C4,500

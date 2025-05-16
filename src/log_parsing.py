@@ -2,6 +2,7 @@ from typing import Optional
 import pandas as pd
 from pydantic import BaseModel
 import string
+from big_kahuna_protocol_types import BigKahunaProtocol
 class LiquidStep(BaseModel):
     type: str
     location: str
@@ -11,15 +12,15 @@ class LiquidStep(BaseModel):
     volume: float
 
 def read_logs(log_file: str):
-    log_data = pd.read_csv(log_file, sep="\t")
+    with open(log_file) as f:
+        log_data = pd.read_csv(f, sep="\t")
     log_data = log_data.fillna("")
-    test = log_data[(log_data["Action"] == "Move Arm To Substrate") | ( log_data["Parameter Name"].str.contains("Output : Volume" ))]
-    test2 = log_data[( log_data["Parameter Name"].str.contains("Output : Volume" ))]
+    filtered_logs = log_data[(log_data["Action"] == "Move Arm To Substrate") | ( log_data["Parameter Name"].str.contains("Output : Volume" ))]
     current_location = None
     current_row = None
     current_column = None
     steps = []
-    for index, row in log_data.iterrows():
+    for index, row in filtered_logs.iterrows():
         if row["Action"] == "Move Arm To Substrate":
             if row["Parameter Name"] == "Input : Substrate":
                 current_location = row["Parameter Value"]
@@ -37,7 +38,26 @@ def read_logs(log_file: str):
             steps.append(LiquidStep(type="dispense", location=current_location, row=current_row, column=current_column, timestamp=row["Time"], volume=row["Parameter Value"]))
         elif row["Parameter Name"] == "Output : Volume Aspirated":
             steps.append(LiquidStep(type="aspirate", location=current_location, row=current_row, column=current_column, timestamp=row["Time"], volume=row["Parameter Value"]))
-        return steps
+    return steps
+def add_timestamps(steps: list, protocol: BigKahunaProtocol):
+    step_index = 0
+    for step in protocol.actions:
+        if step.action_type == "transfer" or step.action_type == "dispense" and "SkipMap" not in step.tags:
+            while step_index < len(steps) and step.dispense_timestamp is None:
+                compare_step = steps[step_index]
+                if compare_step.row is not None and compare_step.column is not None:
+                    well = compare_step.row + str(compare_step.column)
+                else:
+                    well = None
+                if step.action_type == "transfer" and compare_step.type == "aspirate" and step.source_well == well and compare_step.location == protocol.plates[step.source_plate].deck_position and step.volume == compare_step.volume:
+                    step.aspirate_timestamp = compare_step.timestamp
+                if step.action_type == "dispense" or (step.action_type == "transfer" and step.aspirate_timestamp is not None) and compare_step.type == "dispense" and step.target == well and compare_step.location == protocol.plates[step.target_plate].deck_position and step.volume == compare_step.volume:
+                    step.dispense_timestamp = compare_step.timestamp
+                step_index += 1
+    return protocol
+                    
+
+
 
         
 

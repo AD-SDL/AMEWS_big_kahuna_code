@@ -1,4 +1,5 @@
 from datetime import datetime
+import json
 from pathlib import Path
 from typing import Annotated, Any, Optional
 
@@ -23,7 +24,8 @@ from big_kahuna_protocol_types import BigKahunaPlate, BigKahunaProtocol, BigKahu
 from madsci.client.resource_client import ResourceClient
 from CustomServiceNew import LS10
 import os
-from log_parsing import read_logs
+from pathlib import Path
+from log_parsing import read_logs, add_timestamps
 
 
 
@@ -60,10 +62,11 @@ class BigKahunaNode(RestNode):
     @action
     def run_protocol(
         self,
-        protocol: BigKahunaProtocol,
+        protocol: Path,
     ) -> ActionResult:
         """generate a library studio protocol"""
-        protocol = BigKahunaProtocol.model_validate(protocol)
+        with open(protocol) as f:
+            protocol = BigKahunaProtocol.model_validate(json.load(f))
         library_studio = LS10()
         library_studio.create_lib(protocol.name)
         library_studio.units = protocol.units
@@ -84,18 +87,19 @@ class BigKahunaNode(RestNode):
         library_studio.as_prep()
         success = library_studio.as_execute()
         if success:
-            file_path = os.path.join(library_studio.dir,library_studio.as10.log)
+            file_path = os.path.join(library_studio.as10.logs_dir,library_studio.as10.log)
             steps = read_logs(file_path)
+            stamped_protocol = add_timestamps(steps, protocol)
             steps = [step.model_dump() for step in steps]
-        # if success and self.resource_client:
-        #     for action in protocol.actions:
-        #         try:
-        #             self.process_resource(action, protocol)
-        #         except Exception as e:
-        #             self.logger.error(str(e))
-            return ActionSucceeded(data={"parsed_log": steps}, files={"log_file": file_path})
+        if success and self.resource_client:
+            for action in protocol.actions:
+                try:
+                    self.process_resource(action, protocol)
+                except Exception as e:
+                    self.logger.error(str(e))
+            return ActionSucceeded(data={"parsed_log": steps, "protocol": stamped_protocol.model_dump()}, files={"log_file": file_path})
         else: 
-             return ActionFailed()
+          return ActionFailed()
         
 
 

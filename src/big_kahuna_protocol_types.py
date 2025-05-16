@@ -144,6 +144,16 @@ class BigKahunaTransfer(BigKahunaAction):
         description="The Big Kahuna Specific Tags for the transfer",
         default=[]
         )
+    aspirate_timestamp: Optional[str] = Field(
+        title="Aspirate Time Stamp",
+        description="The timestamp for the transfer aspration",
+        default=None
+        )
+    dispense_timestamp: Optional[str] = Field(
+        title="Dispense Time Stamp",
+        description="The timestamp for the transfer aspration",
+        default=None
+        )
 
 
 class BigKahunaDispense(BigKahunaAction):
@@ -172,6 +182,11 @@ class BigKahunaDispense(BigKahunaAction):
         title="Tag Code",
         description="The Big Kahuna Specific Tags for the transfer",
         default=[]
+        )
+    dispense_timestamp: Optional[str] = Field(
+        title="Dispense Time Stamp",
+        description="The timestamp for the transfer aspration",
+        default=None
         )
 
 class BigKahunaPause(BigKahunaAction):

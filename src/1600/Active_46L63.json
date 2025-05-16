@@ -1,0 +1,2123 @@
+{
+    "code": "46L63",
+    "barcode": "000076",
+    "rack": {
+        "name": "Rack 6x15 ICP robotic",
+        "type": "ICP90",
+        "instrument": "BK",
+        "position": "Deck 16-17 Waste 1",
+        "label": "",
+        "code": null,
+        "holder": null,
+        "items": 90,
+        "layout": "rectangular",
+        "rows": 6,
+        "columns": 15
+    },
+    "route": {
+        "ready": "no",
+        "type": "active",
+        "priority": "clear",
+        "route": [
+            "UR5",
+            "Storage",
+            "UR5",
+            "ICP",
+            "UR5",
+            "Trash"
+        ],
+        "step": 0,
+        "datetimes": []
+    },
+    "creator": {
+        "location": "BK",
+        "position": "Deck 16-17 Waste 1",
+        "ID": "ICP1",
+        "protocol": 1600,
+        "datetime": "2025-05-16 12:42:49.463966",
+        "content": {
+            "ICP1:A13": {
+                "composition": {
+                    "standard": 0.1,
+                    "solvent": 0.9
+                },
+                "constitution": {
+                    "Y": 1.0
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124242",
+                "parents": [
+                    "plate1:A1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:A14": {
+                "composition": {
+                    "standard": 0.1,
+                    "solvent": 0.9
+                },
+                "constitution": {
+                    "Y": 1.0
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124242",
+                "parents": [
+                    "plate1:B1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:A15": {
+                "composition": {
+                    "standard": 0.1,
+                    "solvent": 0.9
+                },
+                "constitution": {
+                    "Y": 1.0
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124242",
+                "parents": [
+                    "plate1:C1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:B1": {
+                "composition": {
+                    "standard": 0.1,
+                    "solvent": 0.9
+                },
+                "constitution": {
+                    "Y": 1.0
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124242",
+                "parents": [
+                    "plate1:A2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:B2": {
+                "composition": {
+                    "standard": 0.1,
+                    "solvent": 0.9
+                },
+                "constitution": {
+                    "Y": 1.0
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124242",
+                "parents": [
+                    "plate1:B2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:B3": {
+                "composition": {
+                    "standard": 0.1,
+                    "solvent": 0.9
+                },
+                "constitution": {
+                    "Y": 1.0
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124242",
+                "parents": [
+                    "plate1:C2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:B4": {
+                "composition": {
+                    "standard": 0.09975,
+                    "solvent": 0.90025
+                },
+                "constitution": {
+                    "Y": 0.9975000000000002
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124242",
+                "parents": [
+                    "plate1:A1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:B5": {
+                "composition": {
+                    "standard": 0.09975,
+                    "solvent": 0.90025
+                },
+                "constitution": {
+                    "Y": 0.9975000000000002
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124242",
+                "parents": [
+                    "plate1:B1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:B6": {
+                "composition": {
+                    "standard": 0.09975,
+                    "solvent": 0.90025
+                },
+                "constitution": {
+                    "Y": 0.9975000000000002
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124243",
+                "parents": [
+                    "plate1:C1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:B7": {
+                "composition": {
+                    "standard": 0.09975,
+                    "solvent": 0.90025
+                },
+                "constitution": {
+                    "Y": 0.9975000000000002
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124243",
+                "parents": [
+                    "plate1:A2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:B8": {
+                "composition": {
+                    "standard": 0.09975,
+                    "solvent": 0.90025
+                },
+                "constitution": {
+                    "Y": 0.9975000000000002
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124243",
+                "parents": [
+                    "plate1:B2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:B9": {
+                "composition": {
+                    "standard": 0.09975,
+                    "solvent": 0.90025
+                },
+                "constitution": {
+                    "Y": 0.9975000000000002
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124243",
+                "parents": [
+                    "plate1:C2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:B10": {
+                "composition": {
+                    "standard": 0.09950062500000001,
+                    "solvent": 0.900499375
+                },
+                "constitution": {
+                    "Y": 0.9950062500000002
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124243",
+                "parents": [
+                    "plate1:A1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:B11": {
+                "composition": {
+                    "standard": 0.09950062500000001,
+                    "solvent": 0.900499375
+                },
+                "constitution": {
+                    "Y": 0.9950062500000002
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124243",
+                "parents": [
+                    "plate1:B1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:B12": {
+                "composition": {
+                    "standard": 0.09950062500000001,
+                    "solvent": 0.900499375
+                },
+                "constitution": {
+                    "Y": 0.9950062500000002
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124243",
+                "parents": [
+                    "plate1:C1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:B13": {
+                "composition": {
+                    "standard": 0.09950062500000001,
+                    "solvent": 0.900499375
+                },
+                "constitution": {
+                    "Y": 0.9950062500000002
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124243",
+                "parents": [
+                    "plate1:A2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:B14": {
+                "composition": {
+                    "standard": 0.09950062500000001,
+                    "solvent": 0.900499375
+                },
+                "constitution": {
+                    "Y": 0.9950062500000002
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124243",
+                "parents": [
+                    "plate1:B2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:B15": {
+                "composition": {
+                    "standard": 0.09950062500000001,
+                    "solvent": 0.900499375
+                },
+                "constitution": {
+                    "Y": 0.9950062500000002
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124243",
+                "parents": [
+                    "plate1:C2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:C1": {
+                "composition": {
+                    "standard": 0.09925187343750003,
+                    "solvent": 0.9007481265625
+                },
+                "constitution": {
+                    "Y": 0.9925187343750003
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124243",
+                "parents": [
+                    "plate1:A1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:C2": {
+                "composition": {
+                    "standard": 0.09925187343750003,
+                    "solvent": 0.9007481265625
+                },
+                "constitution": {
+                    "Y": 0.9925187343750003
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124243",
+                "parents": [
+                    "plate1:B1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:C3": {
+                "composition": {
+                    "standard": 0.09925187343750003,
+                    "solvent": 0.9007481265625
+                },
+                "constitution": {
+                    "Y": 0.9925187343750003
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124243",
+                "parents": [
+                    "plate1:C1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:C4": {
+                "composition": {
+                    "standard": 0.09925187343750003,
+                    "solvent": 0.9007481265625
+                },
+                "constitution": {
+                    "Y": 0.9925187343750003
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124243",
+                "parents": [
+                    "plate1:A2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:C5": {
+                "composition": {
+                    "standard": 0.09925187343750003,
+                    "solvent": 0.9007481265625
+                },
+                "constitution": {
+                    "Y": 0.9925187343750003
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124243",
+                "parents": [
+                    "plate1:B2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:C6": {
+                "composition": {
+                    "standard": 0.09925187343750003,
+                    "solvent": 0.9007481265625
+                },
+                "constitution": {
+                    "Y": 0.9925187343750003
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124243",
+                "parents": [
+                    "plate1:C2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:C7": {
+                "composition": {
+                    "standard": 0.09900374375390628,
+                    "solvent": 0.9009962562460937
+                },
+                "constitution": {
+                    "Y": 0.9900374375390628
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124243",
+                "parents": [
+                    "plate1:A1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:C8": {
+                "composition": {
+                    "standard": 0.09900374375390628,
+                    "solvent": 0.9009962562460937
+                },
+                "constitution": {
+                    "Y": 0.9900374375390628
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124243",
+                "parents": [
+                    "plate1:B1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:C9": {
+                "composition": {
+                    "standard": 0.09900374375390628,
+                    "solvent": 0.9009962562460937
+                },
+                "constitution": {
+                    "Y": 0.9900374375390628
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124243",
+                "parents": [
+                    "plate1:C1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:C10": {
+                "composition": {
+                    "standard": 0.09900374375390628,
+                    "solvent": 0.9009962562460937
+                },
+                "constitution": {
+                    "Y": 0.9900374375390628
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124243",
+                "parents": [
+                    "plate1:A2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:C11": {
+                "composition": {
+                    "standard": 0.09900374375390628,
+                    "solvent": 0.9009962562460937
+                },
+                "constitution": {
+                    "Y": 0.9900374375390628
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124243",
+                "parents": [
+                    "plate1:B2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:C12": {
+                "composition": {
+                    "standard": 0.09900374375390628,
+                    "solvent": 0.9009962562460937
+                },
+                "constitution": {
+                    "Y": 0.9900374375390628
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124243",
+                "parents": [
+                    "plate1:C2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:C13": {
+                "composition": {
+                    "standard": 0.09875623439452152,
+                    "solvent": 0.9012437656054785
+                },
+                "constitution": {
+                    "Y": 0.9875623439452152
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124244",
+                "parents": [
+                    "plate1:A1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:C14": {
+                "composition": {
+                    "standard": 0.09875623439452152,
+                    "solvent": 0.9012437656054785
+                },
+                "constitution": {
+                    "Y": 0.9875623439452152
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124244",
+                "parents": [
+                    "plate1:B1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:C15": {
+                "composition": {
+                    "standard": 0.09875623439452152,
+                    "solvent": 0.9012437656054785
+                },
+                "constitution": {
+                    "Y": 0.9875623439452152
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124244",
+                "parents": [
+                    "plate1:C1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:D1": {
+                "composition": {
+                    "standard": 0.09875623439452152,
+                    "solvent": 0.9012437656054785
+                },
+                "constitution": {
+                    "Y": 0.9875623439452152
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124244",
+                "parents": [
+                    "plate1:A2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:D2": {
+                "composition": {
+                    "standard": 0.09875623439452152,
+                    "solvent": 0.9012437656054785
+                },
+                "constitution": {
+                    "Y": 0.9875623439452152
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124244",
+                "parents": [
+                    "plate1:B2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:D3": {
+                "composition": {
+                    "standard": 0.09875623439452152,
+                    "solvent": 0.9012437656054785
+                },
+                "constitution": {
+                    "Y": 0.9875623439452152
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124244",
+                "parents": [
+                    "plate1:C2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:D4": {
+                "composition": {
+                    "standard": 0.09850934380853521,
+                    "solvent": 0.9014906561914648
+                },
+                "constitution": {
+                    "Y": 0.9850934380853522
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124244",
+                "parents": [
+                    "plate1:A1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:D5": {
+                "composition": {
+                    "standard": 0.09850934380853521,
+                    "solvent": 0.9014906561914648
+                },
+                "constitution": {
+                    "Y": 0.9850934380853522
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124244",
+                "parents": [
+                    "plate1:B1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:D6": {
+                "composition": {
+                    "standard": 0.09850934380853521,
+                    "solvent": 0.9014906561914648
+                },
+                "constitution": {
+                    "Y": 0.9850934380853522
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124244",
+                "parents": [
+                    "plate1:C1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:D7": {
+                "composition": {
+                    "standard": 0.09850934380853521,
+                    "solvent": 0.9014906561914648
+                },
+                "constitution": {
+                    "Y": 0.9850934380853522
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124244",
+                "parents": [
+                    "plate1:A2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:D8": {
+                "composition": {
+                    "standard": 0.09850934380853521,
+                    "solvent": 0.9014906561914648
+                },
+                "constitution": {
+                    "Y": 0.9850934380853522
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124244",
+                "parents": [
+                    "plate1:B2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:D9": {
+                "composition": {
+                    "standard": 0.09850934380853521,
+                    "solvent": 0.9014906561914648
+                },
+                "constitution": {
+                    "Y": 0.9850934380853522
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124244",
+                "parents": [
+                    "plate1:C2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:D10": {
+                "composition": {
+                    "standard": 0.09826307044901389,
+                    "solvent": 0.9017369295509862
+                },
+                "constitution": {
+                    "Y": 0.982630704490139
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124244",
+                "parents": [
+                    "plate1:A1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:D11": {
+                "composition": {
+                    "standard": 0.09826307044901389,
+                    "solvent": 0.9017369295509862
+                },
+                "constitution": {
+                    "Y": 0.982630704490139
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124244",
+                "parents": [
+                    "plate1:B1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:D12": {
+                "composition": {
+                    "standard": 0.09826307044901389,
+                    "solvent": 0.9017369295509862
+                },
+                "constitution": {
+                    "Y": 0.982630704490139
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124244",
+                "parents": [
+                    "plate1:C1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:D13": {
+                "composition": {
+                    "standard": 0.09826307044901389,
+                    "solvent": 0.9017369295509862
+                },
+                "constitution": {
+                    "Y": 0.982630704490139
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124244",
+                "parents": [
+                    "plate1:A2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:D14": {
+                "composition": {
+                    "standard": 0.09826307044901389,
+                    "solvent": 0.9017369295509862
+                },
+                "constitution": {
+                    "Y": 0.982630704490139
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124244",
+                "parents": [
+                    "plate1:B2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:D15": {
+                "composition": {
+                    "standard": 0.09826307044901389,
+                    "solvent": 0.9017369295509862
+                },
+                "constitution": {
+                    "Y": 0.982630704490139
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124244",
+                "parents": [
+                    "plate1:C2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:E1": {
+                "composition": {
+                    "standard": 0.09801741277289135,
+                    "solvent": 0.9019825872271087
+                },
+                "constitution": {
+                    "Y": 0.9801741277289135
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124244",
+                "parents": [
+                    "plate1:A1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:E2": {
+                "composition": {
+                    "standard": 0.09801741277289135,
+                    "solvent": 0.9019825872271087
+                },
+                "constitution": {
+                    "Y": 0.9801741277289135
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124244",
+                "parents": [
+                    "plate1:B1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:E3": {
+                "composition": {
+                    "standard": 0.09801741277289135,
+                    "solvent": 0.9019825872271087
+                },
+                "constitution": {
+                    "Y": 0.9801741277289135
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124244",
+                "parents": [
+                    "plate1:C1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:E4": {
+                "composition": {
+                    "standard": 0.09801741277289135,
+                    "solvent": 0.9019825872271087
+                },
+                "constitution": {
+                    "Y": 0.9801741277289135
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124244",
+                "parents": [
+                    "plate1:A2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:E5": {
+                "composition": {
+                    "standard": 0.09801741277289135,
+                    "solvent": 0.9019825872271087
+                },
+                "constitution": {
+                    "Y": 0.9801741277289135
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124245",
+                "parents": [
+                    "plate1:B2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:E6": {
+                "composition": {
+                    "standard": 0.09801741277289135,
+                    "solvent": 0.9019825872271087
+                },
+                "constitution": {
+                    "Y": 0.9801741277289135
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124245",
+                "parents": [
+                    "plate1:C2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:E7": {
+                "composition": {
+                    "standard": 0.09777236924095913,
+                    "solvent": 0.9022276307590409
+                },
+                "constitution": {
+                    "Y": 0.9777236924095913
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124245",
+                "parents": [
+                    "plate1:A1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:E8": {
+                "composition": {
+                    "standard": 0.09777236924095913,
+                    "solvent": 0.9022276307590409
+                },
+                "constitution": {
+                    "Y": 0.9777236924095913
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124245",
+                "parents": [
+                    "plate1:B1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:E9": {
+                "composition": {
+                    "standard": 0.09777236924095913,
+                    "solvent": 0.9022276307590409
+                },
+                "constitution": {
+                    "Y": 0.9777236924095913
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124245",
+                "parents": [
+                    "plate1:C1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:E10": {
+                "composition": {
+                    "standard": 0.09777236924095913,
+                    "solvent": 0.9022276307590409
+                },
+                "constitution": {
+                    "Y": 0.9777236924095913
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124245",
+                "parents": [
+                    "plate1:A2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:E11": {
+                "composition": {
+                    "standard": 0.09777236924095913,
+                    "solvent": 0.9022276307590409
+                },
+                "constitution": {
+                    "Y": 0.9777236924095913
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124245",
+                "parents": [
+                    "plate1:B2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:E12": {
+                "composition": {
+                    "standard": 0.09777236924095913,
+                    "solvent": 0.9022276307590409
+                },
+                "constitution": {
+                    "Y": 0.9777236924095913
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124245",
+                "parents": [
+                    "plate1:C2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:E13": {
+                "composition": {
+                    "standard": 0.09752793831785674,
+                    "solvent": 0.9024720616821433
+                },
+                "constitution": {
+                    "Y": 0.9752793831785674
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124245",
+                "parents": [
+                    "plate1:A1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:E14": {
+                "composition": {
+                    "standard": 0.09752793831785674,
+                    "solvent": 0.9024720616821433
+                },
+                "constitution": {
+                    "Y": 0.9752793831785674
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124245",
+                "parents": [
+                    "plate1:B1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:E15": {
+                "composition": {
+                    "standard": 0.09752793831785674,
+                    "solvent": 0.9024720616821433
+                },
+                "constitution": {
+                    "Y": 0.9752793831785674
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124245",
+                "parents": [
+                    "plate1:C1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:F1": {
+                "composition": {
+                    "standard": 0.09752793831785674,
+                    "solvent": 0.9024720616821433
+                },
+                "constitution": {
+                    "Y": 0.9752793831785674
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124245",
+                "parents": [
+                    "plate1:A2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:F2": {
+                "composition": {
+                    "standard": 0.09752793831785674,
+                    "solvent": 0.9024720616821433
+                },
+                "constitution": {
+                    "Y": 0.9752793831785674
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124245",
+                "parents": [
+                    "plate1:B2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:F3": {
+                "composition": {
+                    "standard": 0.09752793831785674,
+                    "solvent": 0.9024720616821433
+                },
+                "constitution": {
+                    "Y": 0.9752793831785674
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124245",
+                "parents": [
+                    "plate1:C2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:F4": {
+                "composition": {
+                    "standard": 0.0972841184720621,
+                    "solvent": 0.9027158815279379
+                },
+                "constitution": {
+                    "Y": 0.9728411847206211
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124245",
+                "parents": [
+                    "plate1:A1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:F5": {
+                "composition": {
+                    "standard": 0.0972841184720621,
+                    "solvent": 0.9027158815279379
+                },
+                "constitution": {
+                    "Y": 0.9728411847206211
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124245",
+                "parents": [
+                    "plate1:B1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:F6": {
+                "composition": {
+                    "standard": 0.0972841184720621,
+                    "solvent": 0.9027158815279379
+                },
+                "constitution": {
+                    "Y": 0.9728411847206211
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124245",
+                "parents": [
+                    "plate1:C1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:F7": {
+                "composition": {
+                    "standard": 0.0972841184720621,
+                    "solvent": 0.9027158815279379
+                },
+                "constitution": {
+                    "Y": 0.9728411847206211
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124245",
+                "parents": [
+                    "plate1:A2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:F8": {
+                "composition": {
+                    "standard": 0.0972841184720621,
+                    "solvent": 0.9027158815279379
+                },
+                "constitution": {
+                    "Y": 0.9728411847206211
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124245",
+                "parents": [
+                    "plate1:B2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:F9": {
+                "composition": {
+                    "standard": 0.0972841184720621,
+                    "solvent": 0.9027158815279379
+                },
+                "constitution": {
+                    "Y": 0.9728411847206211
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124246",
+                "parents": [
+                    "plate1:C2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:F10": {
+                "composition": {
+                    "standard": 0.09704090817588196,
+                    "solvent": 0.902959091824118
+                },
+                "constitution": {
+                    "Y": 0.9704090817588196
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124246",
+                "parents": [
+                    "plate1:A1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:F11": {
+                "composition": {
+                    "standard": 0.09704090817588196,
+                    "solvent": 0.902959091824118
+                },
+                "constitution": {
+                    "Y": 0.9704090817588196
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124246",
+                "parents": [
+                    "plate1:B1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:F12": {
+                "composition": {
+                    "standard": 0.09704090817588196,
+                    "solvent": 0.902959091824118
+                },
+                "constitution": {
+                    "Y": 0.9704090817588196
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124246",
+                "parents": [
+                    "plate1:C1",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:F13": {
+                "composition": {
+                    "standard": 0.09704090817588196,
+                    "solvent": 0.902959091824118
+                },
+                "constitution": {
+                    "Y": 0.9704090817588196
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124246",
+                "parents": [
+                    "plate1:A2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:F14": {
+                "composition": {
+                    "standard": 0.09704090817588196,
+                    "solvent": 0.902959091824118
+                },
+                "constitution": {
+                    "Y": 0.9704090817588196
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124246",
+                "parents": [
+                    "plate1:B2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:F15": {
+                "composition": {
+                    "standard": 0.09704090817588196,
+                    "solvent": 0.902959091824118
+                },
+                "constitution": {
+                    "Y": 0.9704090817588196
+                },
+                "unit": "ppm",
+                "volume": 2500,
+                "timestamp": "20250516_124246",
+                "parents": [
+                    "plate1:C2",
+                    "solvent"
+                ],
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "type": "analyte",
+                "container": "ICP tube",
+                "name": ""
+            },
+            "ICP1:A1": {
+                "composition": {
+                    "solvent": 0.9,
+                    "standard": 0.1
+                },
+                "constitution": {
+                    "Y": 1.0
+                },
+                "container": "ICP tube",
+                "name": "",
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "parents": [
+                    "plate1:A1",
+                    "solvent"
+                ],
+                "timestamp": "20250516_112512",
+                "type": "blank",
+                "unit": "ppm",
+                "volume": 2500
+            },
+            "ICP1:A10": {
+                "composition": {
+                    "mixture1": 4.97512437810943e-05,
+                    "solvent": 0.99,
+                    "standard": 0.009950248756218905
+                },
+                "constitution": {
+                    "Li": 0.00995024875621886,
+                    "Y": 0.09950248756218906
+                },
+                "container": "ICP tube",
+                "name": "",
+                "parent_volumes": [
+                    25,
+                    2475
+                ],
+                "parents": [
+                    "plate1:A4",
+                    "solvent"
+                ],
+                "timestamp": "20250516_122346",
+                "type": "calibration",
+                "unit": "ppm",
+                "volume": 2500
+            },
+            "ICP1:A11": {
+                "composition": {
+                    "mixture1": 4.97512437810943e-05,
+                    "solvent": 0.99,
+                    "standard": 0.009950248756218905
+                },
+                "constitution": {
+                    "Li": 0.00995024875621886,
+                    "Y": 0.09950248756218906
+                },
+                "container": "ICP tube",
+                "name": "",
+                "parent_volumes": [
+                    25,
+                    2475
+                ],
+                "parents": [
+                    "plate1:B4",
+                    "solvent"
+                ],
+                "timestamp": "20250516_122346",
+                "type": "calibration",
+                "unit": "ppm",
+                "volume": 2500
+            },
+            "ICP1:A12": {
+                "composition": {
+                    "mixture1": 4.97512437810943e-05,
+                    "solvent": 0.99,
+                    "standard": 0.009950248756218905
+                },
+                "constitution": {
+                    "Li": 0.00995024875621886,
+                    "Y": 0.09950248756218906
+                },
+                "container": "ICP tube",
+                "name": "",
+                "parent_volumes": [
+                    25,
+                    2475
+                ],
+                "parents": [
+                    "plate1:C4",
+                    "solvent"
+                ],
+                "timestamp": "20250516_122346",
+                "type": "calibration",
+                "unit": "ppm",
+                "volume": 2500
+            },
+            "ICP1:A2": {
+                "composition": {
+                    "solvent": 0.9,
+                    "standard": 0.1
+                },
+                "constitution": {
+                    "Y": 1.0
+                },
+                "container": "ICP tube",
+                "name": "",
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "parents": [
+                    "plate1:B1",
+                    "solvent"
+                ],
+                "timestamp": "20250516_112512",
+                "type": "blank",
+                "unit": "ppm",
+                "volume": 2500
+            },
+            "ICP1:A3": {
+                "composition": {
+                    "solvent": 0.9,
+                    "standard": 0.1
+                },
+                "constitution": {
+                    "Y": 1.0
+                },
+                "container": "ICP tube",
+                "name": "",
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "parents": [
+                    "plate1:C1",
+                    "solvent"
+                ],
+                "timestamp": "20250516_112512",
+                "type": "blank",
+                "unit": "ppm",
+                "volume": 2500
+            },
+            "ICP1:A4": {
+                "composition": {
+                    "solvent": 0.9,
+                    "standard": 0.1
+                },
+                "constitution": {
+                    "Y": 1.0
+                },
+                "container": "ICP tube",
+                "name": "",
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "parents": [
+                    "plate1:A2",
+                    "solvent"
+                ],
+                "timestamp": "20250516_112512",
+                "type": "blank",
+                "unit": "ppm",
+                "volume": 2500
+            },
+            "ICP1:A5": {
+                "composition": {
+                    "solvent": 0.9,
+                    "standard": 0.1
+                },
+                "constitution": {
+                    "Y": 1.0
+                },
+                "container": "ICP tube",
+                "name": "",
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "parents": [
+                    "plate1:B2",
+                    "solvent"
+                ],
+                "timestamp": "20250516_112512",
+                "type": "blank",
+                "unit": "ppm",
+                "volume": 2500
+            },
+            "ICP1:A6": {
+                "composition": {
+                    "solvent": 0.9,
+                    "standard": 0.1
+                },
+                "constitution": {
+                    "Y": 1.0
+                },
+                "container": "ICP tube",
+                "name": "",
+                "parent_volumes": [
+                    250,
+                    2250
+                ],
+                "parents": [
+                    "plate1:C2",
+                    "solvent"
+                ],
+                "timestamp": "20250516_112513",
+                "type": "blank",
+                "unit": "ppm",
+                "volume": 2500
+            },
+            "ICP1:A7": {
+                "composition": {
+                    "mixture1": 4.97512437810943e-05,
+                    "solvent": 0.99,
+                    "standard": 0.009950248756218905
+                },
+                "constitution": {
+                    "Li": 0.00995024875621886,
+                    "Y": 0.09950248756218906
+                },
+                "container": "ICP tube",
+                "name": "",
+                "parent_volumes": [
+                    25,
+                    2475
+                ],
+                "parents": [
+                    "plate1:A3",
+                    "solvent"
+                ],
+                "timestamp": "20250516_122346",
+                "type": "calibration",
+                "unit": "ppm",
+                "volume": 2500
+            },
+            "ICP1:A8": {
+                "composition": {
+                    "mixture1": 4.97512437810943e-05,
+                    "solvent": 0.99,
+                    "standard": 0.009950248756218905
+                },
+                "constitution": {
+                    "Li": 0.00995024875621886,
+                    "Y": 0.09950248756218906
+                },
+                "container": "ICP tube",
+                "name": "",
+                "parent_volumes": [
+                    25,
+                    2475
+                ],
+                "parents": [
+                    "plate1:B3",
+                    "solvent"
+                ],
+                "timestamp": "20250516_122346",
+                "type": "calibration",
+                "unit": "ppm",
+                "volume": 2500
+            },
+            "ICP1:A9": {
+                "composition": {
+                    "mixture1": 4.97512437810943e-05,
+                    "solvent": 0.99,
+                    "standard": 0.009950248756218905
+                },
+                "constitution": {
+                    "Li": 0.00995024875621886,
+                    "Y": 0.09950248756218906
+                },
+                "container": "ICP tube",
+                "name": "",
+                "parent_volumes": [
+                    25,
+                    2475
+                ],
+                "parents": [
+                    "plate1:C3",
+                    "solvent"
+                ],
+                "timestamp": "20250516_122346",
+                "type": "calibration",
+                "unit": "ppm",
+                "volume": 2500
+            }
+        }
+    }
+}
